@@ -17,6 +17,20 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Kit com 2 shorts de renda saída de praia",
+    "chamada": "Look de praia pronto pro verão",
+    "descricao": "2 shorts de renda com barrinha de pompom e elástico na cintura. Do P ao GG. R$76 no Pix.",
+    "preco": "80,00",
+    "img": "https://down-br.img.susercontent.com/file/sg-11134201-22110-k2p48emqsojv29",
+    "link": "https://s.shopee.com.br/80DZGOZ6ql",
+    "selo": "Nota 4,8",
+    "categoria": "casa",
+    "shopId": "601168577",
+    "itemId": "18361282272",
+    "novo": true,
+    "video": true
+  },
+  {
     "nome": "Copo térmico long neck com caixa de som Bluetooth 420ml",
     "chamada": "O copo que toca música",
     "descricao": "Caixa de som Bluetooth no fundo do copo. Gelada por até 4 horas, aço inox.",
