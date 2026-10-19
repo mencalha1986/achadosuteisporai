@@ -52,7 +52,7 @@ window.PRODUTOS = [
     "preco": "44,90",
     "img": "https://down-br.img.susercontent.com/file/br-11134207-820lb-mlrszsr2mf4631",
     "fotos": ["https://down-br.img.susercontent.com/file/br-11134207-820lb-mlrszsr2mf4631","https://down-br.img.susercontent.com/file/br-11134207-820mg-mlrszsqklgqvaf","https://down-br.img.susercontent.com/file/br-11134207-820m5-mlrszsqunv9jf8","https://down-br.img.susercontent.com/file/br-11134207-820md-mlrszsqdvv2c80","https://down-br.img.susercontent.com/file/br-11134207-820ly-mlrszsr2qmti0c"],
-    "link": "https://s.shopee.com.br/70L1lumRlD",
+    "link": "https://s.shopee.com.br/40hQtvPPLZ",
     "selo": "Nota 4,8",
     "categoria": "tecnologia",
     "shopId": "1067468895",
