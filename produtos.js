@@ -5,6 +5,7 @@ window.PRECOS_CONFERIDOS_EM = "15/10/2026";
 // - aPartir: true quando o produto tem variações com preços diferentes (mostra "a partir de")
 // - shopId/itemId: código do anúncio na Shopee (usado pra atualizar preço automaticamente)
 // - novo: true mostra o selo "Novo" (produtos adicionados na semana)
+// - video: true coloca o produto em "Viu no TikTok?" no topo (produtos dos vídeos da semana)
 // - a ordem da lista é a ordem de exibição (mais novos primeiro)
 window.CATEGORIAS = [
   { id: "tecnologia",  nome: "Tecnologia",  icone: "📱" },
@@ -15,6 +16,89 @@ window.CATEGORIAS = [
 ];
 
 window.PRODUTOS = [
+  {
+    "nome": "Dispenser de detergente com suporte para esponja 500ml",
+    "chamada": "Detergente na esponja com um aperto",
+    "descricao": "Aperta a esponja e o detergente sobe. Gasta menos e a pia fica seca.",
+    "preco": "29,99",
+    "img": "https://down-br.img.susercontent.com/file/br-11134207-820lq-mn5snvdj73eof6",
+    "link": "https://s.shopee.com.br/4qGX6JuTdw",
+    "selo": "+20 mil vendidos",
+    "categoria": "cozinha",
+    "shopId": "402450553",
+    "itemId": "18850902830",
+    "novo": true,
+    "video": true
+  },
+  {
+    "nome": "Cabo carregador 3 em 1 retrátil (iPhone, USB-C e micro USB)",
+    "chamada": "Um cabo pra família toda",
+    "descricao": "Serve em iPhone e Android. Recolhe e cabe na bolsa.",
+    "preco": "12,68",
+    "img": "https://down-br.img.susercontent.com/file/cn-11134207-7qukw-liimcob5bofqac",
+    "link": "https://s.shopee.com.br/1LgevvBBf2",
+    "categoria": "tecnologia",
+    "shopId": "867108347",
+    "itemId": "23391627027",
+    "novo": true,
+    "video": true
+  },
+  {
+    "nome": "Tapete mágico de banheiro super absorvente 40x60cm",
+    "chamada": "A água some em segundos",
+    "descricao": "Secagem rápida e antiderrapante. Sem tapete encharcado.",
+    "preco": "11,99",
+    "img": "https://down-br.img.susercontent.com/file/br-11134207-820ls-msfxtq2kwpacee",
+    "link": "https://s.shopee.com.br/7Kxs4nA7Zn",
+    "selo": "+2 mil vendidos",
+    "categoria": "casa",
+    "shopId": "1833357051",
+    "itemId": "58261036911",
+    "novo": true,
+    "video": true
+  },
+  {
+    "nome": "Balança digital de cozinha 10kg (pilhas inclusas)",
+    "chamada": "Receita e dieta na medida certa",
+    "descricao": "Pesa de 1g a 10kg, com tara. Já vem com pilhas.",
+    "preco": "19,90",
+    "img": "https://down-br.img.susercontent.com/file/br-11134207-820ls-mqg6n5hzpc037f",
+    "link": "https://s.shopee.com.br/4fx6tzHqiW",
+    "selo": "+300 mil vendidos",
+    "categoria": "cozinha",
+    "shopId": "847598018",
+    "itemId": "17191520281",
+    "novo": true,
+    "video": true
+  },
+  {
+    "nome": "Kit potes herméticos para geladeira com cesto removível",
+    "chamada": "Geladeira organizada, menos comida no lixo",
+    "descricao": "Legumes e frutas duram mais e tudo fica à vista.",
+    "preco": "34,90",
+    "img": "https://down-br.img.susercontent.com/file/sg-11134201-825ap-mr6baq9qnkzrc6",
+    "link": "https://s.shopee.com.br/7pu8flFjln",
+    "selo": "+1 mil/mês",
+    "categoria": "organizacao",
+    "shopId": "332179884",
+    "itemId": "58265083673",
+    "novo": true,
+    "video": true
+  },
+  {
+    "nome": "Escova rasqueadeira tira pelos mortos (cães e gatos)",
+    "chamada": "Olha quanto pelo sai em 1 minuto",
+    "descricao": "Aperta o botão e o pelo solta da escova de uma vez.",
+    "preco": "14,90",
+    "img": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3dg900h03zsa3",
+    "link": "https://s.shopee.com.br/6q1bU3pVf1",
+    "selo": "+3 mil/mês",
+    "categoria": "limpeza",
+    "shopId": "1258878023",
+    "itemId": "19699563205",
+    "novo": true,
+    "video": true
+  },
   {
     "nome": "Cristaleira com espelho e fita LED (MDF)",
     "chamada": "A cristaleira que ilumina a sala",
@@ -62,7 +146,8 @@ window.PRODUTOS = [
     "selo": "+20 mil vendidos",
     "categoria": "organizacao",
     "shopId": "988030305",
-    "itemId": "22198885114"
+    "itemId": "22198885114",
+    "video": true
   },
   {
     "nome": "Organizador giratório 360° multiuso",
@@ -119,6 +204,7 @@ window.PRODUTOS = [
     "categoria": "cozinha",
     "shopId": "1531826276",
     "itemId": "23199020709",
+    "video": true,
     "aPartir": true
   },
   {
@@ -248,6 +334,7 @@ window.PRODUTOS = [
     "categoria": "limpeza",
     "shopId": "1323203204",
     "itemId": "58254858171",
+    "video": true,
     "novo": true,
     "aPartir": true
   },

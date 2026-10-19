@@ -87,6 +87,11 @@
 
   /* ---------- catálogo ---------- */
   .catalog{margin-top:40px}
+  /* ---------- viu no tiktok ---------- */
+  .tk{margin-top:32px}
+  .tk-head h2{margin:0;font-size:20px;letter-spacing:-.2px}
+  .tk-head p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
+  .cta-btns{display:flex;flex-wrap:wrap;gap:10px}
   .cat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px}
   .cat-head h2{margin:0;font-size:22px;letter-spacing:-.4px;font-weight:800}
   .cat-head p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
@@ -198,6 +203,14 @@
 <main class="wrap">
   <div id="destaque"></div>
 
+  <section class="tk" id="tiktok" aria-labelledby="t-tiktok" hidden>
+    <div class="tk-head">
+      <h2 id="t-tiktok">🎬 Viu no TikTok? Tá aqui</h2>
+      <p>Os produtos dos vídeos desta semana. Toque e veja na Shopee.</p>
+    </div>
+    <div class="grid" id="grade-tiktok"></div>
+  </section>
+
   <section class="catalog" id="achados" aria-labelledby="t-achados">
     <div class="cat-head">
       <div>
@@ -240,18 +253,25 @@
     <details><summary>Eu pago mais caro comprando por aqui?</summary><p>Não. O preço é exatamente o mesmo da Shopee. Alguns links são de afiliado: a Shopee paga uma pequena comissão pra gente, sem custo nenhum pra você.</p></details>
     <details><summary>Quem vende e entrega o produto?</summary><p>As lojas da Shopee. Você finaliza a compra no site ou app da Shopee, com pagamento protegido e a garantia de reembolso deles.</p></details>
     <details><summary>O preço do site está desatualizado, e agora?</summary><p>Os preços mudam toda hora na Shopee (promoções, variações de modelo). O valor que vale é sempre o que aparece na Shopee na hora da compra.</p></details>
+    <details><summary>Vi o produto num vídeo do TikTok. Onde ele está?</summary><p>Logo no topo, em "Viu no TikTok? Tá aqui". Se não achar, digite o nome do produto na busca.</p></details>
     <details><summary>Como recebo os links pelo Instagram?</summary><p>Comente "QUERO" no post do produto que te mandamos o link na hora, direto no seu direct.</p></details>
   </div>
 
   <div class="cta-ig">
     <div>
       <h2>📲 Achados novos toda semana</h2>
-      <p>Siga no Instagram pra ver os vídeos dos produtos funcionando e ser o primeiro a saber das novidades.</p>
+      <p>Siga no TikTok e no Instagram pra ver os vídeos dos produtos funcionando e ser o primeiro a saber das novidades.</p>
     </div>
-    <a class="btn-ig" href="https://instagram.com/achadosuteisporai" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-      @achadosuteisporai
-    </a>
+    <div class="cta-btns">
+      <a class="btn-ig" href="https://www.tiktok.com/@romulo.mencalha" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9a7.4 7.4 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.2-1.5Z"/></svg>
+        TikTok
+      </a>
+      <a class="btn-ig" href="https://instagram.com/achadosuteisporai" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        @achadosuteisporai
+      </a>
+    </div>
   </div>
 </main>
 
@@ -352,6 +372,13 @@
   new IntersectionObserver(([e]) => tb.classList.toggle('stuck', e.intersectionRatio < 1), { threshold: [1], rootMargin: '-1px 0px 0px 0px' }).observe(tb);
 
   render();
+
+  // viu no tiktok: produtos dos vídeos da semana
+  const doVideo = P.filter(p => p.video && p !== d);
+  if (doVideo.length) {
+    document.getElementById('grade-tiktok').innerHTML = doVideo.map(card).join('');
+    document.getElementById('tiktok').hidden = false;
+  }
 </script>
 </body>
 </html>
