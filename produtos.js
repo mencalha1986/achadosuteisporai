@@ -17,6 +17,48 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Cadeira de praia infantil dobrável com guarda-sol",
+    "chamada": "Praia com criança sem sol na cabeça",
+    "descricao": "Vem com guarda-sol de ângulo ajustável. Dobra e leva fácil.",
+    "preco": "95,80",
+    "img": "https://down-br.img.susercontent.com/file/br-11134207-820lg-mqqldyl4aryaa1",
+    "link": "https://s.shopee.com.br/7pu8iyADTm",
+    "selo": "Nota 4,9",
+    "categoria": "casa",
+    "shopId": "1355121921",
+    "itemId": "22995072272",
+    "novo": true,
+    "video": true
+  },
+  {
+    "nome": "Cadeira de praia Mor alta de alumínio dobrável",
+    "chamada": "Cadeira de praia que dura anos",
+    "descricao": "Alumínio leve e resistente, modelo alto e mais confortável.",
+    "preco": "78,90",
+    "img": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m7mn1mprd7b642",
+    "link": "https://s.shopee.com.br/2LZCAsvDTw",
+    "selo": "+10 mil vendidos",
+    "categoria": "casa",
+    "shopId": "1485007125",
+    "itemId": "23498337370",
+    "novo": true,
+    "video": true
+  },
+  {
+    "nome": "Esteira de praia térmica impermeável anti-areia",
+    "chamada": "Esteira que não junta areia",
+    "descricao": "Impermeável, dobrável e portátil. Praia e piquenique.",
+    "preco": "62,39",
+    "img": "https://down-br.img.susercontent.com/file/sg-11134201-8261g-ml3xppx7j5zb00",
+    "link": "https://s.shopee.com.br/5AtNY7sQCM",
+    "selo": "Nota 4,9",
+    "categoria": "casa",
+    "shopId": "429262942",
+    "itemId": "53706391602",
+    "novo": true,
+    "video": true
+  },
+  {
     "nome": "Dispenser de detergente com suporte para esponja 500ml",
     "chamada": "Detergente na esponja com um aperto",
     "descricao": "Aperta a esponja e o detergente sobe. Gasta menos e a pia fica seca.",
