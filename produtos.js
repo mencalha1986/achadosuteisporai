@@ -17,6 +17,20 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Copo térmico long neck com caixa de som Bluetooth 420ml",
+    "chamada": "O copo que toca música",
+    "descricao": "Caixa de som Bluetooth no fundo do copo. Gelada por até 4 horas, aço inox.",
+    "preco": "44,90",
+    "img": "https://down-br.img.susercontent.com/file/br-11134207-820lb-mlrszsr2mf4631",
+    "link": "https://s.shopee.com.br/70L1lumRlD",
+    "selo": "Nota 4,8",
+    "categoria": "tecnologia",
+    "shopId": "1067468895",
+    "itemId": "58206863328",
+    "novo": true,
+    "video": true
+  },
+  {
     "nome": "Cadeira de praia infantil dobrável com guarda-sol",
     "chamada": "Praia com criança sem sol na cabeça",
     "descricao": "Vem com guarda-sol de ângulo ajustável. Dobra e leva fácil.",
