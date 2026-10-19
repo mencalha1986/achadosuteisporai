@@ -117,28 +117,32 @@
   }
 
   .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
-  @media (min-width:640px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
-  @media (min-width:980px){.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}}
-  .card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;text-decoration:none;box-shadow:var(--shadow-sm);transition:transform .18s,box-shadow .18s,border-color .18s}
-  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#d5e0dd}
+  @media (min-width:720px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}}
+  .card{display:flex;flex-direction:column;background:var(--card);border:2px solid var(--line);border-radius:var(--r-lg);overflow:hidden;text-decoration:none;box-shadow:var(--shadow-sm);transition:transform .18s,box-shadow .18s,border-color .18s}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--teal)}
+  /* foto grande do anúncio */
   .c-media{position:relative;aspect-ratio:1/1;background:#fff;overflow:hidden}
   .c-media img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
   .card:hover .c-media img{transform:scale(1.04)}
-  .c-flags{position:absolute;top:8px;left:8px;right:8px;display:flex;justify-content:space-between;gap:6px;pointer-events:none}
-  .flag{font-size:11px;font-weight:700;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--teal-dark);box-shadow:0 1px 4px rgba(0,0,0,.12);white-space:nowrap}
-  .flag.new{background:var(--teal);color:#fff}
-  .c-body{display:flex;flex-direction:column;gap:4px;padding:12px 12px 14px;flex:1}
-  .c-cat{font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--teal)}
-  .c-body h3{margin:0;font-size:14.5px;line-height:1.3;font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
-  .c-body p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
-  .c-foot{margin-top:auto;padding-top:8px;display:flex;flex-direction:column;gap:10px}
-  .c-foot .price{font-size:19px;flex-wrap:wrap;column-gap:5px;row-gap:0}
+  /* faixa de selos logo abaixo da foto */
+  .c-flags{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:9px 10px;background:var(--teal-dark);min-height:44px}
+  .flag{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:800;padding:5px 10px;border-radius:999px;background:var(--yellow);color:var(--teal-dark);white-space:nowrap}
+  .flag.rate{background:#fff}
+  .c-body{display:flex;flex-direction:column;gap:6px;padding:12px 12px 14px;flex:1}
+  .c-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .c-cat{font-size:11px;font-weight:800;letter-spacing:.3px;color:var(--teal)}
+  .c-new{font-size:11px;font-weight:800;color:var(--yellow-ink);background:#FFF3C4;padding:2px 8px;border-radius:999px}
+  .c-body h3{margin:0;font-size:15.5px;line-height:1.25;font-weight:800;letter-spacing:-.2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .c-body p{margin:0;font-size:13px;color:var(--muted);line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .c-foot{margin-top:auto;padding-top:10px;display:flex;flex-direction:column;gap:10px}
+  .c-foot .price{font-size:20px;flex-wrap:wrap;column-gap:5px;row-gap:0}
   .c-foot .price small{flex-basis:100%;font-size:11px;line-height:1.2}
   .c-foot .price small:empty{display:none}
-  .c-btn{display:flex;align-items:center;justify-content:center;gap:6px;height:40px;border-radius:var(--r-sm);background:var(--teal-50);color:var(--teal-dark);font-weight:700;font-size:13.5px;transition:background .15s,color .15s}
-  .card:hover .c-btn{background:var(--teal);color:#fff}
-  .c-btn svg{width:15px;height:15px}
-  @media (min-width:640px){.c-body{padding:14px 14px 16px}.c-body h3{font-size:15.5px}}
+  .c-btn{display:flex;align-items:center;justify-content:center;gap:8px;height:46px;border-radius:999px;background:var(--yellow);color:var(--teal-dark);font-weight:800;font-size:14.5px;transition:background .15s,transform .15s}
+  .card:hover .c-btn{background:#FFCB3D}
+  .c-btn svg{width:16px;height:16px}
+  @media (max-width:719px){.c-body p{-webkit-line-clamp:2}.flag{font-size:10.5px;padding:4px 8px}.c-btn{height:42px;font-size:13.5px}}
+  @media (min-width:720px){.c-body{padding:16px 18px 18px;gap:8px}.c-body h3{font-size:19px}.c-body p{font-size:14px}.c-foot .price{font-size:22px}.c-btn{height:52px;font-size:16px}}
   .empty{display:none;text-align:center;color:var(--muted);padding:40px 16px;background:var(--card);border:1px dashed var(--line);border-radius:var(--r-md);margin-top:16px}
   .empty b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
   .empty button{margin-top:12px;border:0;background:var(--teal);color:#fff;font-weight:700;padding:10px 16px;border-radius:10px;cursor:pointer}
@@ -321,14 +325,17 @@
 
   // catálogo
   const lista = P.filter(p => p !== d);
-  const card = (p, i) => `
+  const card = (p, i) => {
+    const nota = /nota/i.test(p.selo || '');
+    const flags = p.selo ? `<span class="flag${nota ? ' rate' : ''}">${nota ? '★' : '🔥'} ${esc(p.selo)}</span>` : '';
+    return `
     <a class="card" href="${esc(p.link)}" target="_blank" rel="noopener sponsored">
       <div class="c-media">
-        <img src="${esc(p.img)}" alt="${esc(p.nome)}" loading="${i < 8 ? 'eager' : 'lazy'}" decoding="async">
-        <div class="c-flags">${p.selo ? `<span class="flag">🔥 ${esc(p.selo)}</span>` : '<span></span>'}${p.novo ? '<span class="flag new">Novo</span>' : ''}</div>
+        <img src="${esc(p.img)}" alt="${esc(p.nome)}" loading="${i < 6 ? 'eager' : 'lazy'}" decoding="async">
       </div>
+      <div class="c-flags">${flags || '<span class="flag rate">✓ Compra segura na Shopee</span>'}</div>
       <div class="c-body">
-        <span class="c-cat">${esc(catNome(p.categoria))}</span>
+        <div class="c-top"><span class="c-cat">${esc(catNome(p.categoria))}</span>${p.novo ? '<span class="c-new">Novo</span>' : ''}</div>
         <h3>${esc(p.chamada)}</h3>
         <p>${esc(p.descricao || p.nome)}</p>
         <div class="c-foot">
@@ -337,6 +344,7 @@
         </div>
       </div>
     </a>`;
+  };
 
   const estado = { cat: 'todos', q: '', ordem: 'rel' };
   const grade = document.getElementById('grade'), vazio = document.getElementById('vazio');
