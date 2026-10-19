@@ -12,7 +12,8 @@ window.CATEGORIAS = [
   { id: "cozinha",     nome: "Cozinha",     icone: "🍳" },
   { id: "organizacao", nome: "Organização", icone: "🗂️" },
   { id: "limpeza",     nome: "Limpeza",     icone: "🧽" },
-  { id: "casa",        nome: "Casa e decoração", icone: "🏠" }
+  { id: "casa",        nome: "Casa e decoração", icone: "🏠" },
+  { id: "moda",        nome: "Moda praia", icone: "👙" }
 ];
 
 window.PRODUTOS = [
@@ -24,7 +25,7 @@ window.PRODUTOS = [
     "img": "https://down-br.img.susercontent.com/file/sg-11134201-22110-k2p48emqsojv29",
     "link": "https://s.shopee.com.br/80DZGOZ6ql",
     "selo": "Nota 4,8",
-    "categoria": "casa",
+    "categoria": "moda",
     "shopId": "601168577",
     "itemId": "18361282272",
     "novo": true,
