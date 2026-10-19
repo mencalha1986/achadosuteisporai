@@ -301,7 +301,11 @@
 
   // destaque (ou o produto que a pessoa veio ver: ?p=itemId)
   const pid = new URLSearchParams(location.search).get('p');
-  const d = (pid && P.find(p => p.itemId === pid)) || P.find(p => p.destaque);
+  // rodízio semanal: semana 0 começa na segunda 19/10/2026, 00h de Brasília (03h UTC)
+  const R = (window.DESTAQUES || []).filter(id => P.some(p => p.itemId === id));
+  const semana = Math.floor((Date.now() - Date.UTC(2026, 9, 19, 3)) / (7 * 864e5));
+  const daSemana = R.length ? P.find(p => p.itemId === R[((semana % R.length) + R.length) % R.length]) : null;
+  const d = (pid && P.find(p => p.itemId === pid)) || daSemana || P.find(p => p.destaque);
   const veio = !!(pid && d && d.itemId === pid);
   if (d) document.getElementById('destaque').innerHTML = `
     <a class="feat${veio ? '' : ' is-top'}" href="${esc(d.link)}" target="_blank" rel="noopener sponsored">

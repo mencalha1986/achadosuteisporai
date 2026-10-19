@@ -1,12 +1,24 @@
 window.PRECOS_CONFERIDOS_EM = "15/10/2026";
 // Produtos do site achadosuteisporai.com.br
 // - categoria: "tecnologia" | "cozinha" | "organizacao" | "limpeza"
-// - destaque: true no produto que aparece grande no topo (só um)
+// - destaque: true no produto que aparece grande no topo quando o rodízio (DESTAQUES) estiver vazio
 // - aPartir: true quando o produto tem variações com preços diferentes (mostra "a partir de")
 // - shopId/itemId: código do anúncio na Shopee (usado pra atualizar preço automaticamente)
 // - novo: true mostra o selo "Novo" (produtos adicionados na semana)
 // - video: true coloca o produto em "Viu no TikTok?" no topo (produtos dos vídeos da semana)
 // - a ordem da lista é a ordem de exibição (mais novos primeiro)
+// Rodízio do "Destaque da semana": troca sozinho toda segunda-feira (00h de Brasília),
+// seguindo esta ordem de itemId. A semana de 19/10/2026 é o primeiro da lista. Para mudar, é só reordenar.
+window.DESTAQUES = [
+  "14241654483", // 19/10 Ampliador de tela 3D (+80 mil vendidos)
+  "17191520281", // 26/10 Balança digital de cozinha (+300 mil)
+  "22392992790", // 02/11 Mixer 2 em 1 (+200 mil)
+  "23096150316", // 09/11 Suporte de parede (+100 mil)
+  "18931705150", // 16/11 Mini processador (+100 mil)
+  "11674191849", // 23/11 Fatiador de legumes (+90 mil)
+  "23199020709"  // 30/11 Cozedor de ovos (+60 mil)
+];
+
 window.CATEGORIAS = [
   { id: "tecnologia",  nome: "Tecnologia",  icone: "📱" },
   { id: "cozinha",     nome: "Cozinha",     icone: "🍳" },
@@ -199,6 +211,7 @@ window.PRODUTOS = [
   {
     "nome": "Suporte de parede multifuncional (celular e controle)",
     "chamada": "Celular carregando sem ficar no chão",
+    "descricao": "Cola na parede sem furar e deixa o celular carregando em pé. Guarda controle e óculos também.",
     "preco": "9,90",
     "img": "img/suporte1.webp",
     "link": "https://s.shopee.com.br/6VOdV4FaxG",
@@ -246,6 +259,7 @@ window.PRODUTOS = [
   {
     "nome": "Mini processador sem fio 250ml",
     "chamada": "Pica alho e cebola em 5 segundos",
+    "descricao": "Pica alho, cebola e salsinha em segundos, sem chorar e sem cheiro na mão. Recarrega no USB.",
     "preco": "23,88",
     "img": "img/proc1.webp",
     "link": "https://s.shopee.com.br/AKbM2iw8y3",
@@ -257,6 +271,7 @@ window.PRODUTOS = [
   {
     "nome": "Batedor/mixer elétrico 2 em 1 recarregável",
     "chamada": "Cappuccino cremoso em 10 segundos",
+    "descricao": "Faz espuma no leite e bate clara em neve. Recarregável, sem fio e cabe na gaveta.",
     "preco": "18,69",
     "img": "img/mixer2.webp",
     "link": "https://s.shopee.com.br/3B8BVXo5i0",
@@ -268,6 +283,7 @@ window.PRODUTOS = [
   {
     "nome": "Cozedor de ovos elétrico a vapor",
     "chamada": "Ovo cozido perfeito sem vigiar a panela",
+    "descricao": "Ovo no ponto certo sem vigiar a panela. Cozinha vários de uma vez e faz legumes no vapor.",
     "preco": "29,98",
     "img": "img/ovos2.webp",
     "link": "https://s.shopee.com.br/6q1TsH14Ws",
@@ -281,6 +297,7 @@ window.PRODUTOS = [
   {
     "nome": "Fatiador de legumes Kitop",
     "chamada": "Couve fininha igual de restaurante",
+    "descricao": "Couve fininha, cenoura e repolho em segundos, muito mais rápido que a faca.",
     "preco": "19,90",
     "img": "img/fati1.webp",
     "link": "https://s.shopee.com.br/6VOdTgjrkM",
