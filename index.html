@@ -146,6 +146,8 @@
   .c-btn{display:flex;align-items:center;justify-content:center;gap:6px;height:40px;border-radius:999px;background:var(--yellow);color:var(--teal-dark);font-weight:800;font-size:13.5px;text-decoration:none;transition:background .15s}
   .c-btn:hover{background:#FFCB3D}
   .c-btn svg{width:15px;height:15px}
+  .c-btn.ml,.feat .btn.ml{background:#FFE600;color:#2D3277}
+  .c-btn.ml:hover,.feat:hover .btn.ml{background:#F5DC00}
   @media (min-width:640px){.c-body{padding:12px 12px 14px}.c-body h3{font-size:15px}}
   .empty{display:none;text-align:center;color:var(--muted);padding:40px 16px;background:var(--card);border:1px dashed var(--line);border-radius:var(--r-md);margin-top:16px}
   .empty b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
@@ -304,6 +306,10 @@
   const num = s => parseFloat(String(s).replace(/\./g, '').replace(',', '.')) || 0;
   // "+20 mil vendidos" -> 20000, "+1 mil/mês" -> 1000, "Nota 4,8" -> 0
   const vendas = p => { const m = /\+?\s*([\d.,]+)\s*(mil)?/i.exec(p.selo || ''); return m && !/nota/i.test(p.selo) ? num(m[1]) * (m[2] ? 1000 : 1) : 0; };
+  // loja do produto: "ml" = Mercado Livre; sem "loja" = Shopee
+  const LOJAS = { shopee: 'Shopee', ml: 'Mercado Livre' };
+  const loja = p => LOJAS[p.loja] ? p.loja : 'shopee';
+  const naLoja = p => (loja(p) === 'ml' ? 'no ' : 'na ') + LOJAS[loja(p)];
   const seta = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   document.getElementById('conferido').textContent = window.PRECOS_CONFERIDOS_EM || '';
 
@@ -323,7 +329,7 @@
         <h2>${esc(d.chamada)}</h2>
         <p>${esc(d.descricao || d.nome)}</p>
         <div class="feat-price"><span class="price"><small>${d.aPartir ? 'a partir de' : 'por'}</small>R$ ${esc(d.preco)}</span>${d.selo ? `<span class="proof">🔥 ${esc(d.selo)}</span>` : ''}</div>
-        <span class="btn">Ver oferta na Shopee ${seta}</span>
+        <span class="btn ${loja(d)}">Ver oferta ${naLoja(d)} ${seta}</span>
       </div>
     </a>`;
 
@@ -334,7 +340,7 @@
   const chave = u => String(u).split('/').pop().replace(/_tn$/, '');
   const card = (p, i) => {
     const nota = /nota/i.test(p.selo || '');
-    const flags = p.selo ? `<span class="flag${nota ? ' rate' : ''}">${nota ? '★' : '🔥'} ${esc(p.selo)}</span>` : '<span class="flag rate">✓ Compra segura na Shopee</span>';
+    const flags = p.selo ? `<span class="flag${nota ? ' rate' : ''}">${nota ? '★' : '🔥'} ${esc(p.selo)}</span>` : `<span class="flag rate">✓ Compra segura ${naLoja(p)}</span>`;
     const vistas = new Set();
     const fotos = [p.img, ...(p.fotos || [])].filter(u => u && !vistas.has(chave(u)) && vistas.add(chave(u))).slice(0, 4);
     const lk = `href="${esc(p.link)}" target="_blank" rel="noopener sponsored"`;
@@ -349,7 +355,7 @@
         <p>${esc(p.descricao || p.nome)}</p>
         <div class="c-foot">
           <span class="price"><small>${p.aPartir ? 'a partir de' : ''}</small>R$ ${esc(p.preco)}</span>
-          <a class="c-btn" ${lk}>Ver na Shopee ${seta}</a>
+          <a class="c-btn ${loja(p)}" ${lk}>Ver ${naLoja(p)} ${seta}</a>
         </div>
       </div>
     </article>`;

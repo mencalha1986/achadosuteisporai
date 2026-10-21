@@ -4,6 +4,7 @@ window.PRECOS_CONFERIDOS_EM = "15/10/2026";
 // - destaque: true no produto que aparece grande no topo quando o rodízio (DESTAQUES) estiver vazio
 // - aPartir: true quando o produto tem variações com preços diferentes (mostra "a partir de")
 // - fotos: fotos do anúncio (a 1ª grande no card, as outras em miniatura; troca ao passar o mouse/tocar)
+// - loja: "ml" para produto do Mercado Livre (botão "Ver no Mercado Livre"); sem loja = Shopee
 // - shopId/itemId: código do anúncio na Shopee (usado pra atualizar preço automaticamente)
 // - novo: true mostra o selo "Novo" (produtos adicionados na semana)
 // - video: true coloca o produto em "Viu no TikTok?" no topo (produtos dos vídeos da semana)
