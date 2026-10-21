@@ -32,6 +32,21 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Adaptador de tomada universal 30W com 2 USB e 2 USB-C",
+    "chamada": "1 tomada que funciona em +150 países",
+    "descricao": "Serve nas tomadas dos EUA, Europa, Reino Unido e Austrália e carrega 4 aparelhos juntos: 2 USB + 2 USB-C, 30W. Bivolt 127/220V.",
+    "preco": "80,91",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_805851-MLA99548337836_122025-F.webp",
+    "fotos": ["https://http2.mlstatic.com/D_NQ_NP_2X_805851-MLA99548337836_122025-F.webp","https://http2.mlstatic.com/D_NQ_NP_2X_928584-MLA92126004906_092025-F.webp","https://http2.mlstatic.com/D_NQ_NP_2X_871436-MLA92125543114_092025-F.webp","https://http2.mlstatic.com/D_NQ_NP_2X_738759-MLA92531111633_092025-F.webp","https://http2.mlstatic.com/D_NQ_NP_2X_685128-MLA92531238393_092025-F.webp"],
+    "link": "https://meli.la/1qFkHPN",
+    "selo": "+100 vendidos",
+    "categoria": "tecnologia",
+    "loja": "ml",
+    "itemId": "MLB47890982",
+    "novo": true,
+    "video": true
+  },
+  {
     "nome": "Kit com 2 shorts de renda saída de praia",
     "chamada": "Look de praia pronto pro verão",
     "descricao": "2 shorts de renda com barrinha de pompom e elástico na cintura. Do P ao GG. R$76 no Pix.",
