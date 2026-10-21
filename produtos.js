@@ -32,6 +32,21 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Mini compressor de ar portátil sem fio Verunto 150 PSI",
+    "chamada": "Calibra o pneu em casa, sem ir ao posto",
+    "descricao": "Bomba de ar sem fio com bateria de 4000mAh, display digital (PSI, bar e kPa) e lanterna LED. Serve para carro, moto, bike e bola. Recarrega no USB-C.",
+    "preco": "71,08",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_695590-MLA110946316826_052026-F.webp",
+    "fotos": ["https://http2.mlstatic.com/D_NQ_NP_2X_695590-MLA110946316826_052026-F.webp","img/bomba-v1.webp","img/bomba-v2.webp"],
+    "link": "https://meli.la/2BWXbN2",
+    "selo": "+10 mil vendidos",
+    "categoria": "tecnologia",
+    "loja": "ml",
+    "itemId": "MLB56690567",
+    "novo": true,
+    "video": true
+  },
+  {
     "nome": "Adaptador de tomada universal 30W com 2 USB e 2 USB-C",
     "chamada": "1 tomada que funciona em +150 países",
     "descricao": "Serve nas tomadas dos EUA, Europa, Reino Unido e Austrália e carrega 4 aparelhos juntos: 2 USB + 2 USB-C, 30W. Bivolt 127/220V.",
