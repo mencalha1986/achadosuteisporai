@@ -32,6 +32,21 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Copo térmico 473ml com caixa de som Bluetooth e tampa com abridor",
+    "chamada": "O copo que gela e toca música",
+    "descricao": "Caixa de som Bluetooth removível e recarregável, com LED colorido. Aço inox, gelada por até 5 horas e quente por até 3 horas. Tampa com vedação e abridor de garrafa.",
+    "preco": "50,40",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_955674-MLB117337708148_102026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp",
+    "fotos": ["https://http2.mlstatic.com/D_NQ_NP_2X_955674-MLB117337708148_102026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp","https://http2.mlstatic.com/D_NQ_NP_2X_660072-MLB117151308901_092026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp","https://http2.mlstatic.com/D_NQ_NP_2X_626727-MLB117152729633_092026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp","https://http2.mlstatic.com/D_NQ_NP_2X_786072-MLB115700354134_092026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp","https://http2.mlstatic.com/D_NQ_NP_2X_720955-MLB115700354414_092026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp"],
+    "link": "https://meli.la/2Vj526g",
+    "selo": "+1000 vendidos",
+    "categoria": "tecnologia",
+    "loja": "ml",
+    "itemId": "MLB5263666062",
+    "novo": true,
+    "video": true
+  },
+  {
     "nome": "Mini compressor de ar portátil sem fio Verunto 150 PSI",
     "chamada": "Calibra o pneu em casa, sem ir ao posto",
     "descricao": "Bomba de ar sem fio com bateria de 4000mAh, display digital (PSI, bar e kPa) e lanterna LED. Serve para carro, moto, bike e bola. Recarrega no USB-C.",
@@ -73,21 +88,6 @@ window.PRODUTOS = [
     "categoria": "moda",
     "shopId": "601168577",
     "itemId": "18361282272",
-    "novo": true,
-    "video": true
-  },
-  {
-    "nome": "Copo térmico long neck com caixa de som Bluetooth 420ml",
-    "chamada": "O copo que toca música",
-    "descricao": "Caixa de som Bluetooth no fundo do copo. Gelada por até 4 horas, aço inox.",
-    "preco": "44,90",
-    "img": "https://down-br.img.susercontent.com/file/br-11134207-820lb-mlrszsr2mf4631",
-    "fotos": ["https://down-br.img.susercontent.com/file/br-11134207-820lb-mlrszsr2mf4631","https://down-br.img.susercontent.com/file/br-11134207-820mg-mlrszsqklgqvaf","https://down-br.img.susercontent.com/file/br-11134207-820m5-mlrszsqunv9jf8","https://down-br.img.susercontent.com/file/br-11134207-820md-mlrszsqdvv2c80","https://down-br.img.susercontent.com/file/br-11134207-820ly-mlrszsr2qmti0c"],
-    "link": "https://s.shopee.com.br/40hQtvPPLZ",
-    "selo": "Nota 4,8",
-    "categoria": "tecnologia",
-    "shopId": "1067468895",
-    "itemId": "58206863328",
     "novo": true,
     "video": true
   },
