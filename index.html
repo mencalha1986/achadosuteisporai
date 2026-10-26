@@ -49,6 +49,14 @@
   .hero h1 em{font-style:normal;color:var(--yellow)}
   .hero p{margin:0;font-size:15.5px;opacity:.85;max-width:540px}
   .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding:0;list-style:none}
+  /* celular: topo mais curto pra os produtos aparecerem antes */
+  @media (max-width:640px){
+    .hero{padding-top:14px}
+    .hero p{font-size:14.5px}
+    .pills{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:14px -16px 0;padding:0 16px}
+    .pills::-webkit-scrollbar{display:none}
+    .pills li{flex:none}
+  }
   .pills li{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);padding:6px 11px;border-radius:999px}
   .pills svg{width:15px;height:15px;color:var(--mint)}
 
@@ -86,11 +94,7 @@
   }
 
   /* ---------- catálogo ---------- */
-  .catalog{margin-top:40px}
-  /* ---------- viu no tiktok ---------- */
-  .tk{margin-top:32px}
-  .tk-head h2{margin:0;font-size:20px;letter-spacing:-.2px}
-  .tk-head p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
+  .catalog{margin-top:36px}
   .cta-btns{display:flex;flex-wrap:wrap;gap:10px}
   .cat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px}
   .cat-head h2{margin:0;font-size:22px;letter-spacing:-.4px;font-weight:800}
@@ -124,6 +128,9 @@
   /* galeria: 1 foto grande + miniaturas */
   .c-media{position:relative;display:block;aspect-ratio:1/1;background:#fff;overflow:hidden}
   .c-media img{width:100%;height:100%;object-fit:cover}
+  /* posição no ranking (só na ordem "mais vendidos") */
+  .rank{position:absolute;top:8px;left:8px;min-width:30px;height:30px;padding:0 8px;display:grid;place-items:center;border-radius:999px;background:var(--teal-dark);color:#fff;font-weight:800;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+  .rank.top{background:var(--yellow);color:var(--teal-dark)}
   .c-thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:5px;background:#fff;border-bottom:1px solid var(--line)}
   .c-th{padding:0;border:2px solid transparent;border-radius:6px;overflow:hidden;aspect-ratio:1/1;background:#f2f4f4;cursor:pointer;transition:border-color .12s,opacity .12s;opacity:.75}
   .c-th img{width:100%;height:100%;object-fit:cover}
@@ -213,18 +220,10 @@
 <main class="wrap">
   <div id="destaque"></div>
 
-  <section class="tk" id="tiktok" aria-labelledby="t-tiktok" hidden>
-    <div class="tk-head">
-      <h2 id="t-tiktok">🎬 Viu no TikTok? Tá aqui</h2>
-      <p>Os produtos dos vídeos desta semana. Toque e veja na loja.</p>
-    </div>
-    <div class="grid" id="grade-tiktok"></div>
-  </section>
-
   <section class="catalog" id="achados" aria-labelledby="t-achados">
     <div class="cat-head">
       <div>
-        <h2 id="t-achados">Todos os achados</h2>
+        <h2 id="t-achados">🏆 Os mais vendidos e bem avaliados</h2>
         <p id="contagem"></p>
       </div>
     </div>
@@ -238,8 +237,8 @@
         </label>
         <label class="sr-only" for="ordem">Ordenar</label>
         <select class="sort" id="ordem">
-          <option value="rel">Recomendados</option>
-          <option value="vend">Mais vendidos</option>
+          <option value="top">Mais vendidos</option>
+          <option value="nota">Melhor nota</option>
           <option value="preco">Menor preço</option>
           <option value="novos">Novidades</option>
         </select>
@@ -263,7 +262,7 @@
     <details><summary>Eu pago mais caro comprando por aqui?</summary><p>Não. O preço é exatamente o mesmo da loja. Alguns links são de afiliado: a Shopee ou o Mercado Livre paga uma pequena comissão pra gente, sem custo nenhum pra você.</p></details>
     <details><summary>Quem vende e entrega o produto?</summary><p>As lojas da Shopee ou do Mercado Livre. Você finaliza a compra no site ou app deles, com pagamento protegido e a garantia de reembolso de cada um.</p></details>
     <details><summary>O preço do site está desatualizado, e agora?</summary><p>Os preços mudam toda hora nas lojas (promoções, variações de modelo). O valor que vale é sempre o que aparece na Shopee ou no Mercado Livre na hora da compra.</p></details>
-    <details><summary>Vi o produto num vídeo do TikTok. Onde ele está?</summary><p>Logo no topo, em "Viu no TikTok? Tá aqui". Se não achar, digite o nome do produto na busca.</p></details>
+    <details><summary>Vi o produto num vídeo do TikTok. Onde ele está?</summary><p>Digite na busca a palavra que aparece no final do vídeo (por exemplo "copo" ou "balança") e o produto aparece na hora.</p></details>
     <details><summary>Como recebo os links pelo Instagram?</summary><p>Comente "QUERO" no post do produto que te mandamos o link na hora, direto no seu direct.</p></details>
   </div>
 
@@ -304,8 +303,13 @@
   const C = window.CATEGORIAS;
   const catNome = id => (C.find(c => c.id === id) || {}).nome || '';
   const num = s => parseFloat(String(s).replace(/\./g, '').replace(',', '.')) || 0;
-  // "+20 mil vendidos" -> 20000, "+1 mil/mês" -> 1000, "Nota 4,8" -> 0
-  const vendas = p => { const m = /\+?\s*([\d.,]+)\s*(mil)?/i.exec(p.selo || ''); return m && !/nota/i.test(p.selo) ? num(m[1]) * (m[2] ? 1000 : 1) : 0; };
+  // vendas e nota do anúncio (campos "vendidos" e "nota" do produtos.js; sem nota, 4,7)
+  const vendas = p => +p.vendidos || 0;
+  const notaDe = p => +p.nota || 4.7;
+  // placar "mais vendidos e bem avaliados": vendas em escala log (10x mais vendas = +1)
+  // e cada 0,1 de nota vale +0,2 (ex.: nota 4,9 com 25 mil vendas empata com 4,8 com 40 mil)
+  const placar = p => Math.log10(vendas(p) + 10) + (notaDe(p) - 4.7) * 2;
+  const fmtNota = n => String(n).replace('.', ',');
   // loja do produto: "ml" = Mercado Livre; sem "loja" = Shopee
   const LOJAS = { shopee: 'Shopee', ml: 'Mercado Livre' };
   const loja = p => LOJAS[p.loja] ? p.loja : 'shopee';
@@ -339,14 +343,19 @@
   const tn = u => /susercontent\.com\/file\/[^/_]+$/.test(u) ? u + '_tn' : u;
   const chave = u => String(u).split('/').pop().replace(/_tn$/, '');
   const card = (p, i) => {
-    const nota = /nota/i.test(p.selo || '');
-    const flags = p.selo ? `<span class="flag${nota ? ' rate' : ''}">${nota ? '★' : '🔥'} ${esc(p.selo)}</span>` : `<span class="flag rate">✓ Compra segura ${naLoja(p)}</span>`;
+    const vSelo = p.selo && !/nota/i.test(p.selo);
+    const flags = [
+      vSelo ? `<span class="flag">🔥 ${esc(p.selo)}</span>` : '',
+      p.nota ? `<span class="flag rate">★ ${fmtNota(p.nota)}</span>` : ''
+    ].join('') || `<span class="flag rate">✓ Compra segura ${naLoja(p)}</span>`;
+    // número no ranking: só na ordem "mais vendidos", sem busca
+    const pos = estado.ordem === 'top' && !estado.q.trim() ? i + 1 : 0;
     const vistas = new Set();
     const fotos = [p.img, ...(p.fotos || [])].filter(u => u && !vistas.has(chave(u)) && vistas.add(chave(u))).slice(0, 4);
     const lk = `href="${esc(p.link)}" target="_blank" rel="noopener sponsored"`;
     return `
     <article class="card">
-      <a class="c-media" ${lk}><img src="${esc(p.img)}" alt="${esc(p.nome)}" loading="${i < 8 ? 'eager' : 'lazy'}" decoding="async"></a>
+      <a class="c-media" ${lk}><img src="${esc(p.img)}" alt="${esc(p.nome)}" loading="${i < 8 ? 'eager' : 'lazy'}" decoding="async">${pos ? `<span class="rank${pos <= 3 ? ' top' : ''}">#${pos}</span>` : ''}</a>
       ${fotos.length > 1 ? `<div class="c-thumbs">${fotos.map((u, k) => `<button type="button" class="c-th${k ? '' : ' on'}" data-src="${esc(u)}" aria-label="Ver foto ${k + 1}"><img src="${esc(tn(u))}" alt="" loading="lazy" decoding="async"></button>`).join('')}</div>` : ''}
       <div class="c-flags">${flags}</div>
       <div class="c-body">
@@ -367,11 +376,9 @@
     if (img.getAttribute('src') !== b.dataset.src) img.src = b.dataset.src;
     c.querySelectorAll('.c-th').forEach(x => x.classList.toggle('on', x === b));
   };
-  ['grade', 'grade-tiktok'].forEach(id => { const g = document.getElementById(id); if (!g) return;
-    g.addEventListener('mouseover', trocaFoto); g.addEventListener('click', trocaFoto); });
-
-  const estado = { cat: 'todos', q: '', ordem: 'rel' };
+  const estado = { cat: 'todos', q: '', ordem: 'top' };
   const grade = document.getElementById('grade'), vazio = document.getElementById('vazio');
+  grade.addEventListener('mouseover', trocaFoto); grade.addEventListener('click', trocaFoto);
   const filtros = document.getElementById('filtros');
 
   const usadas = C.filter(c => lista.some(p => p.categoria === c.id));
@@ -383,7 +390,8 @@
     // com busca, inclui também o destaque (quem vem do TikTok busca pelo nome)
     let itens = (q ? P : lista).filter(p => (estado.cat === 'todos' || p.categoria === estado.cat) &&
       (!q || norm([p.nome, p.chamada, p.descricao, catNome(p.categoria)].join(' ')).includes(q)));
-    if (estado.ordem === 'vend') itens.sort((a, b) => vendas(b) - vendas(a) || a._i - b._i);
+    if (estado.ordem === 'top') itens.sort((a, b) => placar(b) - placar(a) || a._i - b._i);
+    if (estado.ordem === 'nota') itens.sort((a, b) => (+b.nota || 0) - (+a.nota || 0) || vendas(b) - vendas(a) || a._i - b._i);
     if (estado.ordem === 'preco') itens.sort((a, b) => num(a.preco) - num(b.preco));
     if (estado.ordem === 'novos') itens.sort((a, b) => (b.novo ? 1 : 0) - (a.novo ? 1 : 0) || a._i - b._i);
     grade.innerHTML = itens.map(card).join('');
@@ -408,13 +416,6 @@
   new IntersectionObserver(([e]) => tb.classList.toggle('stuck', e.intersectionRatio < 1), { threshold: [1], rootMargin: '-1px 0px 0px 0px' }).observe(tb);
 
   render();
-
-  // viu no tiktok: produtos dos vídeos da semana
-  const doVideo = P.filter(p => p.video && p !== d);
-  if (doVideo.length) {
-    document.getElementById('grade-tiktok').innerHTML = doVideo.map(card).join('');
-    document.getElementById('tiktok').hidden = false;
-  }
 </script>
 </body>
 </html>
