@@ -8,6 +8,7 @@ window.PRECOS_CONFERIDOS_EM = "15/10/2026";
 // - shopId/itemId: código do anúncio na Shopee (usado pra atualizar preço automaticamente)
 // - novo: true mostra o selo "Novo" (produtos adicionados na semana)
 // - vendidos: número de vendas do anúncio (ex.: 20000 para "+20 mil vendidos")
+// - slug: endereço da página do produto (achadosuteisporai.com.br/<slug>/), só letras minúsculas e hífen
 // - nota: nota do anúncio (ex.: 4.8). Sem nota, o site considera 4,7
 // - o site ordena sozinho pelos mais vendidos e bem avaliados (vendidos + nota);
 //   a ordem desta lista só desempata (mais novos primeiro)
@@ -35,6 +36,7 @@ window.CATEGORIAS = [
 window.PRODUTOS = [
   {
     "nome": "Copo térmico 473ml com caixa de som Bluetooth e tampa com abridor",
+    "slug": "copo-termico-caixa-de-som",
     "chamada": "O copo que gela e toca música",
     "descricao": "Caixa de som Bluetooth removível e recarregável, com LED colorido. Aço inox, gelada por até 5 horas e quente por até 3 horas. Tampa com vedação e abridor de garrafa.",
     "preco": "50,40",
@@ -52,6 +54,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Mini compressor de ar portátil sem fio Verunto 150 PSI",
+    "slug": "compressor-de-ar-portatil",
     "chamada": "Calibra o pneu em casa, sem ir ao posto",
     "descricao": "Bomba de ar sem fio com bateria de 4000mAh, display digital (PSI, bar e kPa) e lanterna LED. Serve para carro, moto, bike e bola. Recarrega no USB-C.",
     "preco": "71,08",
@@ -69,6 +72,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Adaptador de tomada universal 30W com 2 USB e 2 USB-C",
+    "slug": "adaptador-de-tomada-universal",
     "chamada": "1 tomada que funciona em +150 países",
     "descricao": "Serve nas tomadas dos EUA, Europa, Reino Unido e Austrália e carrega 4 aparelhos juntos: 2 USB + 2 USB-C, 30W. Bivolt 127/220V.",
     "preco": "80,91",
@@ -86,6 +90,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Kit com 2 shorts de renda saída de praia",
+    "slug": "short-renda-saida-de-praia",
     "chamada": "Look de praia pronto pro verão",
     "descricao": "2 shorts de renda com barrinha de pompom e elástico na cintura. Do P ao GG. R$76 no Pix.",
     "preco": "80,00",
@@ -103,6 +108,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Cadeira de praia infantil dobrável com guarda-sol",
+    "slug": "cadeira-de-praia-infantil",
     "chamada": "Praia com criança sem sol na cabeça",
     "descricao": "Vem com guarda-sol de ângulo ajustável. Dobra e leva fácil.",
     "preco": "95,80",
@@ -119,6 +125,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Cadeira de praia Mor alta de alumínio dobrável",
+    "slug": "cadeira-de-praia-aluminio",
     "chamada": "Cadeira de praia que dura anos",
     "descricao": "Alumínio leve e resistente, modelo alto e mais confortável.",
     "preco": "78,90",
@@ -135,6 +142,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Esteira de praia térmica impermeável anti-areia",
+    "slug": "esteira-de-praia",
     "chamada": "Esteira que não junta areia",
     "descricao": "Impermeável, dobrável e portátil. Praia e piquenique.",
     "preco": "62,39",
@@ -151,6 +159,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Dispenser de detergente com suporte para esponja 500ml",
+    "slug": "dispenser-de-detergente",
     "chamada": "Detergente na esponja com um aperto",
     "descricao": "Aperta a esponja e o detergente sobe. Gasta menos e a pia fica seca.",
     "preco": "29,99",
@@ -167,6 +176,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Cabo carregador 3 em 1 retrátil (iPhone, USB-C e micro USB)",
+    "slug": "cabo-carregador-3-em-1",
     "chamada": "Um cabo pra família toda",
     "descricao": "Serve em iPhone e Android. Recolhe e cabe na bolsa.",
     "preco": "12,68",
@@ -181,6 +191,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Tapete mágico de banheiro super absorvente 40x60cm",
+    "slug": "tapete-de-banheiro-absorvente",
     "chamada": "A água some em segundos",
     "descricao": "Secagem rápida e antiderrapante. Sem tapete encharcado.",
     "preco": "11,99",
@@ -197,6 +208,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Balança digital de cozinha 10kg (pilhas inclusas)",
+    "slug": "balanca-digital-de-cozinha",
     "chamada": "Receita e dieta na medida certa",
     "descricao": "Pesa de 1g a 10kg, com tara. Já vem com pilhas.",
     "preco": "19,90",
@@ -213,6 +225,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Kit potes herméticos para geladeira com cesto removível",
+    "slug": "potes-hermeticos-geladeira",
     "chamada": "Geladeira organizada, menos comida no lixo",
     "descricao": "Legumes e frutas duram mais e tudo fica à vista.",
     "preco": "34,90",
@@ -229,6 +242,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Escova rasqueadeira tira pelos mortos (cães e gatos)",
+    "slug": "escova-tira-pelos-pet",
     "chamada": "Olha quanto pelo sai em 1 minuto",
     "descricao": "Aperta o botão e o pelo solta da escova de uma vez.",
     "preco": "14,90",
@@ -245,6 +259,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Cristaleira com espelho e fita LED (MDF)",
+    "slug": "cristaleira-com-espelho-led",
     "chamada": "A cristaleira que ilumina a sala",
     "descricao": "R$885,39 no Pix com cupom. Espelho e fita LED.",
     "preco": "1.013,04",
@@ -260,6 +275,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Ampliador de tela 3D para celular",
+    "slug": "ampliador-de-tela-celular",
     "chamada": "Transforme o celular numa telona",
     "descricao": "Filme, série, futebol e chamada de vídeo bem maiores. Não precisa de bateria nem de fio. Ótimo presente de Natal pra pais e avós.",
     "preco": "16,99",
@@ -275,6 +291,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Suporte de parede multifuncional (celular e controle)",
+    "slug": "suporte-de-parede-celular",
     "chamada": "Celular carregando sem ficar no chão",
     "descricao": "Cola na parede sem furar e deixa o celular carregando em pé. Guarda controle e óculos também.",
     "preco": "9,90",
@@ -290,6 +307,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Organizador de pia com porta-pano e ganchos",
+    "slug": "organizador-de-pia",
     "chamada": "Pia organizada sem furar nada",
     "preco": "21,90",
     "vendidos": 20000,
@@ -304,6 +322,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Organizador giratório 360° multiuso",
+    "slug": "organizador-giratorio",
     "chamada": "Pega tudo sem bagunçar o armário",
     "preco": "29,90",
     "vendidos": 10000,
@@ -317,6 +336,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Kit 7 organizadores de gaveta em acrílico",
+    "slug": "organizador-de-gaveta",
     "chamada": "Gaveta bagunçada nunca mais",
     "preco": "24,90",
     "vendidos": 10000,
@@ -331,6 +351,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Mini processador sem fio 250ml",
+    "slug": "mini-processador-de-alho",
     "chamada": "Pica alho e cebola em 5 segundos",
     "descricao": "Pica alho, cebola e salsinha em segundos, sem chorar e sem cheiro na mão. Recarrega no USB.",
     "preco": "23,88",
@@ -345,6 +366,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Batedor/mixer elétrico 2 em 1 recarregável",
+    "slug": "mixer-batedor-de-leite",
     "chamada": "Cappuccino cremoso em 10 segundos",
     "descricao": "Faz espuma no leite e bate clara em neve. Recarregável, sem fio e cabe na gaveta.",
     "preco": "18,69",
@@ -359,6 +381,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Cozedor de ovos elétrico a vapor",
+    "slug": "cozedor-de-ovos",
     "chamada": "Ovo cozido perfeito sem vigiar a panela",
     "descricao": "Ovo no ponto certo sem vigiar a panela. Cozinha vários de uma vez e faz legumes no vapor.",
     "preco": "29,98",
@@ -375,6 +398,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Fatiador de legumes Kitop",
+    "slug": "fatiador-de-legumes",
     "chamada": "Couve fininha igual de restaurante",
     "descricao": "Couve fininha, cenoura e repolho em segundos, muito mais rápido que a faca.",
     "preco": "19,90",
@@ -389,6 +413,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Mini soprador a jato 130.000 RPM recarregável",
+    "slug": "mini-soprador-recarregavel",
     "chamada": "Mini soprador que limpa tudo",
     "preco": "45,59",
     "nota": 4.8,
@@ -402,6 +427,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Kit clips organizadores de fios autoadesivos",
+    "slug": "organizador-de-fios",
     "chamada": "Chega de fio bagunçado atrás dos móveis",
     "preco": "11,48",
     "vendidos": 2000,
@@ -416,6 +442,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Torneira gourmet inox com chuveirinho 360°",
+    "slug": "torneira-gourmet",
     "chamada": "Pia com cara de cozinha gourmet",
     "preco": "25,88",
     "vendidos": 3000,
@@ -430,6 +457,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Desentupidor de pia, vaso e caixa de gordura",
+    "slug": "desentupidor-de-pia",
     "chamada": "Pia entupida? Resolve sem encanador",
     "preco": "17,99",
     "vendidos": 20000,
@@ -444,6 +472,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "10 ganchos adesivos transparentes",
+    "slug": "ganchos-adesivos",
     "chamada": "Pendure tudo sem furar a parede",
     "preco": "14,85",
     "vendidos": 20000,
@@ -457,6 +486,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Carregador portátil 10.000mAh com cabo embutido",
+    "slug": "carregador-portatil-powerbank",
     "chamada": "Nunca mais fique com 0% de bateria",
     "preco": "31,99",
     "vendidos": 20000,
@@ -471,6 +501,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Removedor de bolinhas de roupa",
+    "slug": "removedor-de-bolinhas",
     "chamada": "Roupa com bolinha fica nova de novo",
     "preco": "14,99",
     "vendidos": 9000,
@@ -485,6 +516,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Bomba elétrica para galão de água",
+    "slug": "bomba-para-galao-de-agua",
     "chamada": "Água do galão sem esforço",
     "preco": "19,59",
     "vendidos": 9000,
@@ -500,6 +532,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Luminária LED 60cm com sensor de movimento",
+    "slug": "luminaria-led-com-sensor",
     "chamada": "Acende sozinha quando você chega",
     "preco": "30,99",
     "vendidos": 9000,
@@ -514,6 +547,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Luva removedora de pelos de pet",
+    "slug": "luva-tira-pelos-pet",
     "chamada": "Pelo de pet sai na hora",
     "preco": "21,95",
     "nota": 4.8,
@@ -530,6 +564,7 @@ window.PRODUTOS = [
   },
   {
     "nome": "Borrifador de azeite em vidro (air fryer)",
+    "slug": "borrifador-de-azeite",
     "chamada": "Azeite na medida na air fryer",
     "preco": "14,89",
     "nota": 4.8,

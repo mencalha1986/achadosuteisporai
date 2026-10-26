@@ -10,6 +10,7 @@
 <meta property="og:description" content="Achados úteis garimpados a dedo, bem avaliados e baratos.">
 <meta property="og:image" content="https://achadosuteisporai.com.br/img/logo.png">
 <meta property="og:url" content="https://achadosuteisporai.com.br/">
+<link rel="canonical" href="https://achadosuteisporai.com.br/">
 <meta name="theme-color" content="#0A3B4A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -317,8 +318,12 @@
   const seta = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   document.getElementById('conferido').textContent = window.PRECOS_CONFERIDOS_EM || '';
 
+  // ?produto=<slug> leva pra página própria do produto (achadosuteisporai.com.br/<slug>/)
+  const qs = new URLSearchParams(location.search);
+  const slugPedido = qs.get('produto');
+  if (slugPedido && P.some(p => p.slug === slugPedido)) location.replace('/' + slugPedido + '/' + location.search.replace(/([?&])produto=[^&]*&?/, '$1').replace(/[?&]$/, ''));
   // destaque (ou o produto que a pessoa veio ver: ?p=itemId)
-  const pid = new URLSearchParams(location.search).get('p');
+  const pid = qs.get('p');
   // rodízio semanal: semana 0 começa na segunda 19/10/2026, 00h de Brasília (03h UTC)
   const R = (window.DESTAQUES || []).filter(id => P.some(p => p.itemId === id));
   const semana = Math.floor((Date.now() - Date.UTC(2026, 9, 19, 3)) / (7 * 864e5));
@@ -360,7 +365,7 @@
       <div class="c-flags">${flags}</div>
       <div class="c-body">
         <div class="c-top"><span class="c-cat">${esc(catNome(p.categoria))}</span>${p.novo ? '<span class="c-new">Novo</span>' : ''}</div>
-        <h3><a ${lk}>${esc(p.chamada)}</a></h3>
+        <h3><a ${p.slug ? `href="/${esc(p.slug)}/"` : lk}>${esc(p.chamada)}</a></h3>
         <p>${esc(p.descricao || p.nome)}</p>
         <div class="c-foot">
           <span class="price"><small>${p.aPartir ? 'a partir de' : ''}</small>R$ ${esc(p.preco)}</span>
