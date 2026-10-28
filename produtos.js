@@ -9,6 +9,7 @@ window.PRECOS_CONFERIDOS_EM = "15/10/2026";
 // - novo: true mostra o selo "Novo" (produtos adicionados na semana)
 // - vendidos: número de vendas do anúncio (ex.: 20000 para "+20 mil vendidos")
 // - slug: endereço da página do produto (achadosuteisporai.com.br/<slug>/), só letras minúsculas e hífen
+// - combina: itemId de outro produto que combina com este (aparece primeiro em "Outros achados" na página do produto)
 // - nota: nota do anúncio (ex.: 4.8). Sem nota, o site considera 4,7
 // - o site ordena sozinho pelos mais vendidos e bem avaliados (vendidos + nota);
 //   a ordem desta lista só desempata (mais novos primeiro)
@@ -35,6 +36,24 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Churrasqueira portátil a carvão com ventoinha e bolsa",
+    "slug": "churrasqueira-portatil-carvao",
+    "chamada": "Churrasco a carvão em qualquer lugar",
+    "descricao": "Grelha de ferro fundido de 31cm com antiaderente e corpo em aço inox. A ventoinha controla a brasa (4 pilhas AA ou USB) e faz bem menos fumaça. Grelha 2 horas sem repor carvão e vem com bolsa. R$358,65 no Pix com cupom.",
+    "preco": "398,89",
+    "vendidos": 133,
+    "nota": 4.8,
+    "img": "https://down-br.img.susercontent.com/file/sg-11134201-820nr-mnl7a8il8snc8f",
+    "fotos": ["https://down-br.img.susercontent.com/file/sg-11134201-820nr-mnl7a8il8snc8f","https://down-br.img.susercontent.com/file/sg-11134201-820my-mnl7a67f33lv38","https://down-br.img.susercontent.com/file/sg-11134201-820n2-mnl7aain41l0cd","https://down-br.img.susercontent.com/file/br-11134207-820mh-mo3t8d4lybk032","https://down-br.img.susercontent.com/file/sg-11134201-820om-mnl7a79h3nr491"],
+    "link": "https://s.shopee.com.br/70LFyy3xf0",
+    "selo": "Nota 4,8",
+    "categoria": "cozinha",
+    "shopId": "1561255159",
+    "itemId": "58209744532",
+    "combina": "MLB5263666062",
+    "novo": true
+  },
+  {
     "nome": "Copo térmico 473ml com caixa de som Bluetooth e tampa com abridor",
     "slug": "copo-termico-caixa-de-som",
     "chamada": "O copo que gela e toca música",
@@ -49,6 +68,7 @@ window.PRODUTOS = [
     "categoria": "tecnologia",
     "loja": "ml",
     "itemId": "MLB5263666062",
+    "combina": "58209744532",
     "novo": true,
     "video": true
   },
