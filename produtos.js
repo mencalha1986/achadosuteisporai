@@ -38,6 +38,29 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Fita de LED 10 metros direto na tomada, 120 LEDs por metro",
+    "slug": "fita-de-led-10-metros",
+    "chamada": "Quarto com luz de hotel por R$45",
+    "descricao": "10 metros de fita com 120 LEDs por metro, ligada direto na tomada, sem fonte. Fina e flexível, já vem com dupla face pra colar em parede, sanca, móvel ou espelho. Escolha a cor da luz e a voltagem (127V ou 220V) no anúncio.",
+    "preco": "45,00",
+    "vendidos": 10000,
+    "nota": 4.8,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_655411-MLA118107408213_092026-F.webp",
+    "fotos": [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_655411-MLA118107408213_092026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_828991-MLA103748645052_012026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_652677-MLA104279367283_012026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_975438-MLA103749319008_012026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_686011-MLA109899317229_032026-F.webp"
+    ],
+    "link": "https://meli.la/131zsgV",
+    "selo": "+10 mil vendidos",
+    "categoria": "casa",
+    "loja": "ml",
+    "itemId": "MLB64099911",
+    "novo": true
+  },
+  {
     "nome": "Câmera lâmpada Wi-Fi 360° com visão noturna Full HD",
     "slug": "camera-lampada-wifi",
     "chamada": "Câmera que rosqueia no bocal da lâmpada",
