@@ -38,6 +38,29 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Papel de parede adesivo tijolinho 3D, rolo 45 cm x 5 m",
+    "slug": "papel-de-parede-tijolinho",
+    "chamada": "Parede de tijolinho sem obra",
+    "descricao": "PVC autoadesivo com textura de tijolinho: dispensa cola e corta com tesoura ou estilete. Cada rolo tem 45 cm x 5 m (até 2,25 m²) e limpa com pano úmido. Três cores: laranja com bege, marrom com bege e salmão com bege. R$27,86 com cupom.",
+    "preco": "30,96",
+    "vendidos": 31,
+    "nota": 5,
+    "img": "https://down-br.img.susercontent.com/file/br-11134207-820lz-mu6vcm48gx6p3d",
+    "fotos": [
+      "https://down-br.img.susercontent.com/file/br-11134207-820lz-mu6vcm48gx6p3d",
+      "https://down-br.img.susercontent.com/file/br-11134207-820m4-mutz31vlbfghbd",
+      "https://down-br.img.susercontent.com/file/br-11134207-820lr-mutz31vkoydc2b",
+      "https://down-br.img.susercontent.com/file/br-11134207-820lk-mutz31vknjswc0",
+      "https://down-br.img.susercontent.com/file/br-11134207-820l4-mutz31vkm58gbf"
+    ],
+    "link": "https://s.shopee.com.br/8pnTnHRCDY",
+    "selo": "Nota 5,0",
+    "categoria": "casa",
+    "shopId": "1935442881",
+    "itemId": "58219794984",
+    "novo": true
+  },
+  {
     "nome": "Placa de captura HDMI 4K 60fps USB 3.0, plug and play",
     "slug": "placa-de-captura-hdmi-4k",
     "chamada": "O jogo da TV aparecendo no notebook",
