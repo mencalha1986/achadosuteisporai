@@ -38,6 +38,53 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Copo térmico Stanley Pint Adventure 354ml (original)",
+    "slug": "copo-stanley-pint-354ml",
+    "chamada": "O copo Stanley pela metade do preço",
+    "descricao": "Copo Stanley original de 354ml, com parede dupla e isolamento a vácuo. Aço inox 18/8 livre de BPA e não transpira por fora. De R$135 por R$68,18 (49% OFF), vendido pelo Mercado Livre.",
+    "preco": "68,18",
+    "vendidos": 500,
+    "nota": 4.9,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_939934-MLA112194843981_052026-F.webp",
+    "fotos": [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_939934-MLA112194843981_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_705852-MLA111183163722_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_756580-MLA112194754079_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_821681-MLA112194843997_052026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_790491-MLA112194991445_052026-F.webp"
+    ],
+    "link": "https://meli.la/1xtwoLt",
+    "selo": "+500 vendidos",
+    "categoria": "verao",
+    "loja": "ml",
+    "itemId": "MLB64381389",
+    "combina": "MLB24221867",
+    "novo": true
+  },
+  {
+    "nome": "Garrafa térmica Stanley Quick Flip Go Bottle 710ml (original)",
+    "slug": "garrafa-stanley-quick-flip-710ml",
+    "chamada": "Garrafa Stanley original com 54% OFF",
+    "descricao": "Garrafa Stanley Quick Flip de 710ml, por dentro e por fora em aço inox. Mantém a bebida gelada por 12 horas e quente por 8 horas. 28,3cm de altura e 410g. De R$289 por R$131,30, vendida pelo Mercado Livre.",
+    "preco": "131,30",
+    "vendidos": 10000,
+    "nota": 4.9,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_699984-MLA119782608699_102026-F.webp",
+    "fotos": [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_699984-MLA119782608699_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_873768-MLA119782580195_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_736996-MLA119781923253_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_902508-MLA119782580223_102026-F.webp"
+    ],
+    "link": "https://meli.la/2HEdM7p",
+    "selo": "+10 mil vendidos",
+    "categoria": "verao",
+    "loja": "ml",
+    "itemId": "MLB24221867",
+    "combina": "MLB64381389",
+    "novo": true
+  },
+  {
     "nome": "Cesto de roupa suja de bambu com tampa, redondo e forrado",
     "slug": "cesto-de-roupa-suja-bambu",
     "chamada": "Adeus roupa suja amontoada na cadeira",
