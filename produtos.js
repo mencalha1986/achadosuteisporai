@@ -38,6 +38,29 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Placa de captura HDMI 4K 60fps USB 3.0, plug and play",
+    "slug": "placa-de-captura-hdmi-4k",
+    "chamada": "O jogo da TV aparecendo no notebook",
+    "descricao": "Liga o HDMI do videogame, câmera ou decodificador na placa e um cabo no USB 3.0 do computador pra gravar ou fazer live. Captura em 4K 60fps, tem entrada e saída HDMI (continua jogando na TV) e entradas de fone e microfone. Plug and play, funciona no Windows, macOS e Linux.",
+    "preco": "127,00",
+    "vendidos": 100,
+    "nota": 5.0,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_610437-MLA108659991887_032026-F.webp",
+    "fotos": [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_610437-MLA108659991887_032026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_884030-MLA108660768021_032026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_704495-MLA118468573447_092026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_636858-MLA116907177242_092026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_912616-MLA116907206954_092026-F.webp"
+    ],
+    "link": "https://meli.la/1yHboD5",
+    "selo": "Nota 5.0",
+    "categoria": "tecnologia",
+    "loja": "ml",
+    "itemId": "MLB66602339",
+    "novo": true
+  },
+  {
     "nome": "Fita de LED 10 metros direto na tomada, 120 LEDs por metro",
     "slug": "fita-de-led-10-metros",
     "chamada": "Quarto com luz de hotel por R$45",
