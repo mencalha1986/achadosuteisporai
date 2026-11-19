@@ -37,6 +37,23 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Cesto de roupa suja de bambu com tampa, redondo e forrado",
+    "slug": "cesto-de-roupa-suja-bambu",
+    "chamada": "Adeus roupa suja amontoada na cadeira",
+    "descricao": "Feito à mão com bambu natural, forrado por dentro, com tampa que esconde o conteúdo e alças de corda. Dobrável para guardar. 1º mais vendido em Cestos de Roupa no Mercado Livre.",
+    "preco": "59,99",
+    "vendidos": 1000,
+    "nota": 4.9,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_942304-MLA96090975058_102025-F.webp",
+    "fotos": ["https://http2.mlstatic.com/D_NQ_NP_2X_942304-MLA96090975058_102025-F.webp","https://http2.mlstatic.com/D_NQ_NP_2X_754104-MLA96534928257_102025-F.webp","https://http2.mlstatic.com/D_NQ_NP_2X_997147-MLA96534761285_102025-F.webp","https://http2.mlstatic.com/D_NQ_NP_2X_740120-MLA96534849035_102025-F.webp","https://http2.mlstatic.com/D_NQ_NP_2X_935369-MLA80333012785_102024-F.webp"],
+    "link": "https://meli.la/2jADUgb",
+    "selo": "1º mais vendido",
+    "categoria": "casa",
+    "loja": "ml",
+    "itemId": "MLB42478996",
+    "novo": true
+  },
+  {
     "nome": "Churrasqueira portátil a carvão com ventoinha e bolsa",
     "slug": "churrasqueira-portatil-carvao",
     "chamada": "Churrasco a carvão em qualquer lugar",
