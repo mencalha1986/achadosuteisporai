@@ -395,7 +395,8 @@
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const norm = s => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   const $ = id => document.getElementById(id);
-  const P = window.PRODUTOS.map((p, i) => ({ ...p, _i: i }));
+  // esgotado: true some do site até voltar o estoque
+  const P = window.PRODUTOS.map((p, i) => ({ ...p, _i: i })).filter(p => !p.esgotado);
   const C = window.CATEGORIAS;
   const catNome = id => (C.find(c => c.id === id) || {}).nome || '';
   const num = s => parseFloat(String(s).replace(/\./g, '').replace(',', '.')) || 0;
