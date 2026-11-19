@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Achados Úteis Por Aí | Achados úteis e baratos</title>
-<meta name="description" content="Achados úteis garimpados a dedo: tecnologia, cozinha, organização e limpeza. Produtos bem avaliados e baratos, com compra direto na Shopee e no Mercado Livre.">
+<meta name="description" content="Achados úteis garimpados a dedo: cozinha, organização, tecnologia, verão, casa e pet. Produtos bem avaliados e baratos, com compra direto na Shopee e no Mercado Livre.">
 <link rel="icon" href="img/logo.png">
 <meta property="og:title" content="Achados Úteis Por Aí">
 <meta property="og:description" content="Achados úteis garimpados a dedo, bem avaliados e baratos.">
@@ -17,54 +17,111 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --teal:#0F5E63;--teal-dark:#0A3B4A;--teal-50:#EEF6F5;--mint:#7EE8C8;--yellow:#FFD866;--yellow-ink:#5C4500;
-    --bg:#F6F8F7;--card:#FFFFFF;--ink:#13262C;--muted:#5D6F75;--line:#E3E9E7;--danger:#C2410C;
-    --r-lg:20px;--r-md:14px;--r-sm:10px;
-    --shadow-sm:0 1px 2px rgba(16,40,46,.06),0 1px 3px rgba(16,40,46,.06);
-    --shadow-md:0 8px 24px rgba(16,40,46,.10);
+    --teal:#0F5E63;--teal-dark:#0A3B4A;--teal-deep:#072B36;--teal-50:#EEF6F5;--mint:#7EE8C8;--yellow:#FFD866;--yellow-ink:#5C4500;
+    --bg:#F4F7F6;--card:#FFFFFF;--ink:#13262C;--muted:#5D6F75;--line:#E3E9E7;
+    --r-lg:22px;--r-md:16px;--r-sm:12px;
+    --shadow-sm:0 1px 2px rgba(16,40,46,.05),0 2px 6px rgba(16,40,46,.04);
+    --shadow-md:0 10px 30px rgba(16,40,46,.12);
     --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+    --head:104px;
   }
+  @media (min-width:900px){:root{--head:118px}}
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 8px);-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit}
   img{max-width:100%;display:block}
   button,input,select{font:inherit;color:inherit}
   .wrap{max-width:1180px;margin:0 auto;padding:0 16px}
   .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  svg.i{width:18px;height:18px;flex:none}
 
-  /* ---------- topo ---------- */
-  .top{background:var(--teal-dark);background-image:radial-gradient(1200px 400px at 85% -10%,rgba(126,232,200,.18),transparent 60%),linear-gradient(160deg,var(--teal),var(--teal-dark));color:#F4F7F6;padding-bottom:72px}
-  .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0}
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
-  .brand img{width:42px;height:42px;border-radius:50%;border:2px solid var(--mint);flex:none}
-  .brand b{display:block;font-size:16.5px;font-weight:800;letter-spacing:-.2px;white-space:nowrap}
-  .brand small{display:block;font-size:12px;opacity:.75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  /* ---------- cabeçalho fixo com menu ---------- */
+  .head{position:sticky;top:0;z-index:30;background:var(--teal-deep);color:#F4F7F6;box-shadow:0 1px 0 rgba(255,255,255,.06),0 6px 18px rgba(0,0,0,.12)}
+  .bar{display:flex;align-items:center;gap:10px;height:56px}
+  @media (min-width:900px){.bar{height:64px}}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;margin-right:auto}
+  .brand img{width:36px;height:36px;border-radius:50%;border:2px solid var(--mint);flex:none}
+  .brand b{display:block;font-size:16px;font-weight:800;letter-spacing:-.2px;white-space:nowrap}
+  .brand small{display:block;font-size:11.5px;opacity:.7;white-space:nowrap}
+  @media (max-width:520px){.brand small{display:none}}
+  .links{display:none;align-items:center;gap:4px}
+  .links a{text-decoration:none;font-weight:600;font-size:14px;padding:8px 12px;border-radius:999px;opacity:.88}
+  .links a:hover{background:rgba(255,255,255,.1);opacity:1}
+  @media (min-width:900px){.links{display:flex}}
+  .ico{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;border:0;background:rgba(255,255,255,.08);color:#fff;cursor:pointer;flex:none}
+  .ico:hover{background:rgba(255,255,255,.16)}
+  .ico svg{width:20px;height:20px}
+  @media (min-width:900px){.ico.menu{display:none}}
   .btn-ig{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--teal-dark);text-decoration:none;font-weight:700;font-size:13.5px;padding:9px 14px;border-radius:999px;white-space:nowrap;flex:none;transition:transform .15s}
   .btn-ig:hover{transform:translateY(-1px)}
   .btn-ig svg{width:17px;height:17px}
-  .hero{padding:26px 0 0;max-width:720px}
-  .brand span{min-width:0}
-  @media (max-width:440px){.brand small{display:none}}
-  .hero h1{font-size:clamp(27px,5.4vw,42px);line-height:1.08;letter-spacing:-.8px;margin:0 0 12px;font-weight:800}
+  .head .btn-ig{display:none}
+  @media (min-width:900px){.head .btn-ig{display:inline-flex}}
+
+  /* trilho de seções (menu rápido) */
+  .secs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:0 16px 10px;margin:0 -16px}
+  .secs::-webkit-scrollbar{display:none}
+  .secs a{flex:none;display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:13.5px;font-weight:600;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(244,247,246,.9);transition:background .15s,color .15s}
+  .secs a:hover{background:rgba(255,255,255,.16)}
+  .secs a.on{background:var(--yellow);color:var(--teal-deep)}
+
+  /* menu lateral (celular) */
+  .drawer{position:fixed;inset:0;z-index:50;visibility:hidden}
+  .drawer.open{visibility:visible}
+  .drawer .shade{position:absolute;inset:0;background:rgba(5,20,25,.5);opacity:0;transition:opacity .2s}
+  .drawer.open .shade{opacity:1}
+  .panel{position:absolute;top:0;right:0;bottom:0;width:min(330px,88vw);background:var(--card);color:var(--ink);transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column;overflow-y:auto}
+  .drawer.open .panel{transform:none}
+  .panel-top{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--line)}
+  .panel-top b{font-size:16px}
+  .panel .ico{background:var(--teal-50);color:var(--teal-dark)}
+  .panel h4{margin:18px 16px 6px;font-size:11.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
+  .panel nav a{display:flex;align-items:center;gap:12px;padding:11px 16px;text-decoration:none;font-weight:600;font-size:15px}
+  .panel nav a:hover{background:var(--teal-50)}
+  .panel nav a span.e{width:28px;text-align:center;font-size:18px}
+  .panel nav a em{margin-left:auto;font-style:normal;font-size:12px;color:var(--muted);background:var(--bg);padding:2px 8px;border-radius:999px}
+  .panel .soc{display:flex;gap:8px;padding:16px;margin-top:auto;border-top:1px solid var(--line)}
+  .panel .soc a{flex:1;justify-content:center;background:var(--teal-50)}
+
+  /* ---------- topo (hero) ---------- */
+  .top{background:var(--teal-dark);background-image:radial-gradient(1000px 380px at 85% -10%,rgba(126,232,200,.2),transparent 60%),linear-gradient(170deg,var(--teal),var(--teal-dark));color:#F4F7F6;padding:26px 0 76px}
+  .hero{max-width:720px}
+  .hero h1{font-size:clamp(27px,5.4vw,44px);line-height:1.08;letter-spacing:-.8px;margin:0 0 10px;font-weight:800}
   .hero h1 em{font-style:normal;color:var(--yellow)}
   .hero p{margin:0;font-size:15.5px;opacity:.85;max-width:540px}
-  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding:0;list-style:none}
-  /* celular: topo mais curto pra os produtos aparecerem antes */
+  .big-search{position:relative;margin-top:18px;max-width:560px}
+  .big-search svg{position:absolute;left:16px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+  .big-search input{width:100%;height:52px;border:0;border-radius:999px;padding:0 48px 0 46px;font-size:16px;background:#fff;color:var(--ink);outline:none;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  .big-search input:focus{box-shadow:0 0 0 4px rgba(255,216,102,.55),0 8px 24px rgba(0,0,0,.18)}
+  .big-search button{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:var(--bg);width:36px;height:36px;border-radius:50%;cursor:pointer;display:none;color:var(--muted)}
+  .big-search.has button{display:grid;place-items:center}
+  .big-search input::-webkit-search-cancel-button{display:none;-webkit-appearance:none}
+  body.buscando .top{padding-bottom:30px}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+  .pills li{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);padding:6px 11px;border-radius:999px}
+  .pills svg{width:15px;height:15px;color:var(--mint)}
   @media (max-width:640px){
-    .hero{padding-top:14px}
+    .top{padding:18px 0 70px}
     .hero p{font-size:14.5px}
     .pills{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:14px -16px 0;padding:0 16px}
     .pills::-webkit-scrollbar{display:none}
     .pills li{flex:none}
   }
-  .pills li{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);padding:6px 11px;border-radius:999px}
-  .pills svg{width:15px;height:15px;color:var(--mint)}
+
+  /* ---------- categorias (atalhos) ---------- */
+  .cats{position:relative;margin-top:-50px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  @media (min-width:700px){.cats{grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}}
+  .cat-tile{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;text-decoration:none;background:var(--card);border-radius:var(--r-md);padding:14px 6px 12px;box-shadow:var(--shadow-md);transition:transform .15s,box-shadow .15s}
+  .cat-tile:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(16,40,46,.16)}
+  .cat-tile .e{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--teal-50);font-size:24px}
+  .cat-tile b{font-size:13px;line-height:1.2;font-weight:700}
+  .cat-tile small{font-size:11.5px;color:var(--muted)}
 
   /* ---------- destaque ---------- */
-  #destaque{margin-top:-52px}
-  .feat{position:relative;display:grid;grid-template-columns:1fr;background:var(--card);border-radius:var(--r-lg);overflow:hidden;text-decoration:none;box-shadow:var(--shadow-md);border:1px solid var(--line)}
-  .feat-media{background:#fff;aspect-ratio:1/1;max-height:440px;width:100%}
+  #destaque{margin-top:28px}
+  .feat{position:relative;display:grid;grid-template-columns:1fr;background:var(--card);border-radius:var(--r-lg);overflow:hidden;text-decoration:none;box-shadow:var(--shadow-sm);border:1px solid var(--line)}
+  .feat-media{background:#fff;aspect-ratio:1/1;max-height:420px;width:100%}
   .feat-media img{width:100%;height:100%;object-fit:cover}
   .feat-body{position:relative;padding:20px 18px 22px;display:flex;flex-direction:column;gap:10px}
   .kicker{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--yellow);background:var(--teal-dark);padding:6px 12px;border-radius:999px}
@@ -78,57 +135,55 @@
   .btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--teal);color:#fff;font-weight:700;font-size:15px;padding:14px 18px;border-radius:var(--r-md);transition:background .15s}
   .btn svg{width:18px;height:18px;flex:none}
   .feat:hover .btn{background:var(--teal-dark)}
+  .feat .btn.ml{background:#FFE600;color:#2D3277}
+  .feat:hover .btn.ml{background:#F5DC00}
   .seal{position:absolute;top:-34px;right:14px;width:92px;height:92px;display:grid;place-items:center;text-align:center;color:var(--teal-dark);transform:rotate(-10deg);filter:drop-shadow(0 6px 10px rgba(0,0,0,.22));pointer-events:none}
   .seal::before{content:"";position:absolute;inset:0;background:var(--yellow);clip-path:polygon(50% 0%,59% 10%,71% 4%,75% 16%,88% 15%,86% 28%,97% 33%,91% 45%,100% 54%,90% 62%,95% 74%,83% 77%,82% 90%,70% 88%,63% 99%,52% 92%,41% 100%,35% 89%,22% 92%,20% 79%,7% 76%,11% 64%,0% 56%,8% 46%,2% 34%,14% 29%,12% 16%,25% 16%,29% 4%,41% 10%)}
   .seal span{position:relative;font-weight:800;line-height:1.02;font-size:10px;letter-spacing:.3px;text-transform:uppercase}
   .seal b{display:block;font-size:19px;letter-spacing:-.3px}
   @media (min-width:780px){
     .feat{grid-template-columns:1fr 1fr}
-    .feat-media{max-height:none;aspect-ratio:auto;min-height:420px}
-    .feat-body{padding:40px 40px;justify-content:center;gap:14px}
+    .feat-media{max-height:none;aspect-ratio:auto;min-height:400px}
+    .feat-body{padding:40px;justify-content:center;gap:14px}
     .feat h2{font-size:32px}
     .seal{top:22px;right:22px;width:128px;height:128px}
     .seal span{font-size:12.5px}.seal b{font-size:25px}
     .feat .btn{align-self:flex-start;padding:15px 28px}
   }
 
-  /* ---------- catálogo ---------- */
-  .catalog{margin-top:36px}
-  .cta-btns{display:flex;flex-wrap:wrap;gap:10px}
-  .cat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px}
-  .cat-head h2{margin:0;font-size:22px;letter-spacing:-.4px;font-weight:800}
-  .cat-head p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
-  .toolbar{position:sticky;top:0;z-index:10;background:rgba(246,248,247,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);margin:0 -16px;padding:10px 16px;border-bottom:1px solid transparent;transition:border-color .2s}
-  .toolbar.stuck{border-bottom-color:var(--line)}
-  .tb-row{display:flex;gap:8px;align-items:center}
-  .search{position:relative;flex:1;min-width:0}
-  .search svg{position:absolute;left:12px;top:50%;width:17px;height:17px;transform:translateY(-50%);color:var(--muted);pointer-events:none}
-  .search input{width:100%;height:42px;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:0 12px 0 38px;font-size:15px;outline:none;transition:border-color .15s,box-shadow .15s}
-  .search input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,94,99,.15)}
-  .sort{height:42px;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:0 10px;font-size:14px;font-weight:600;cursor:pointer;max-width:46%}
-  .chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-top:10px;padding-bottom:2px}
-  .chips::-webkit-scrollbar{display:none}
-  .chip{flex:none;border:0;background:transparent;color:var(--muted);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px;cursor:pointer;transition:background .15s,color .15s}
-  .chip:hover{background:#E9EEEC;color:var(--ink)}
-  .chip[aria-pressed="true"]{background:var(--teal-dark);color:#fff}
-  @media (min-width:780px){
-    .toolbar{display:flex;align-items:center;gap:12px;flex-direction:row-reverse}
-    .tb-row{flex:0 0 440px}
-    .chips{margin-top:0;flex:1}
-  }
+  /* ---------- seções ---------- */
+  .sec{margin-top:44px}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px}
+  .sec-head h2{margin:0;font-size:22px;letter-spacing:-.4px;font-weight:800;line-height:1.2}
+  .sec-head p{margin:3px 0 0;color:var(--muted);font-size:13.5px}
+  .sec-head .more{flex:none;font-size:13.5px;font-weight:700;color:var(--teal);text-decoration:none;white-space:nowrap;background:none;border:0;cursor:pointer;padding:6px 0}
+  .sec-head .more:hover{text-decoration:underline}
+  .rail-nav{display:none;gap:6px}
+  @media (hover:hover) and (min-width:900px){.rail-nav{display:flex}}
+  .rail-nav button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card);cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+  .rail-nav button:hover{border-color:var(--teal);color:var(--teal)}
+  .rail-nav svg{width:16px;height:16px}
+  .sec-cat{padding-top:28px;border-top:1px solid var(--line)}
+  .sec-cat .sec-head h2 .e{margin-right:4px}
+
+  /* grade e trilho horizontal de cards */
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  @media (min-width:640px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}
+  @media (min-width:960px){.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}}
+  .rail{display:grid;grid-auto-flow:column;grid-auto-columns:min(46%,190px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -16px;padding:4px 16px 12px;scroll-padding:0 16px}
+  .rail::-webkit-scrollbar{display:none}
+  .rail .card{scroll-snap-align:start}
+  @media (min-width:640px){.rail{grid-auto-columns:220px;gap:18px}}
 
   /* card enxuto: foto, nota/vendas, nome, preço e botão */
-  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
-  @media (min-width:640px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}}
-  @media (min-width:960px){.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}}
-  .card{display:flex;flex-direction:column;background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(16,40,46,.05);transition:box-shadow .2s,transform .2s}
-  .card:hover{box-shadow:0 10px 28px rgba(16,40,46,.10);transform:translateY(-2px)}
+  .card{display:flex;flex-direction:column;background:var(--card);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow .2s,transform .2s}
+  .card:hover{box-shadow:0 12px 28px rgba(16,40,46,.12);transform:translateY(-2px)}
   .c-media{position:relative;display:block;aspect-ratio:1/1;background:#fff;overflow:hidden}
   .c-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s}
-  /* 2ª foto aparece suave ao passar o mouse (só no computador) */
   .c-media img.alt{opacity:0}
   @media (hover:hover){.card:hover .c-media img.alt{opacity:1}}
   .c-new{position:absolute;top:10px;left:10px;font-size:11px;font-weight:700;color:var(--teal-dark);background:rgba(255,255,255,.92);padding:3px 9px;border-radius:999px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  .c-rank{position:absolute;top:10px;left:10px;display:grid;place-items:center;min-width:28px;height:28px;padding:0 7px;border-radius:999px;font-size:12.5px;font-weight:800;color:var(--teal-deep);background:var(--yellow);box-shadow:0 2px 6px rgba(0,0,0,.15)}
   .c-body{display:flex;flex-direction:column;gap:6px;padding:12px 12px 14px;flex:1}
   .c-meta{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .c-meta .star{color:#E0A100}
@@ -138,24 +193,28 @@
   .c-foot .price{font-size:19px;flex-wrap:wrap;column-gap:5px;row-gap:0}
   .c-foot .price small{flex-basis:100%;font-size:11px;line-height:1.2}
   .c-foot .price small:empty{display:none}
-  .c-btn{display:flex;align-items:center;justify-content:center;gap:6px;height:38px;border-radius:12px;background:var(--teal-50);color:var(--teal-dark);font-weight:700;font-size:13.5px;text-decoration:none;transition:background .15s,color .15s}
+  .c-btn{display:flex;align-items:center;justify-content:center;gap:6px;min-height:38px;padding:6px 8px;text-align:center;line-height:1.2;border-radius:12px;background:var(--teal-50);color:var(--teal-dark);font-weight:700;font-size:13.5px;text-decoration:none;transition:background .15s,color .15s}
   .c-btn:hover{background:var(--teal);color:#fff}
-  .c-btn svg{width:15px;height:15px}
-  .feat .btn.ml{background:#FFE600;color:#2D3277}
-  .feat:hover .btn.ml{background:#F5DC00}
+  .c-btn svg{width:15px;height:15px;flex:none}
+  .c-btn.ml{background:#FFE600;color:#2D3277}
+  .c-btn.ml:hover{background:#F5DC00;color:#2D3277}
   @media (min-width:640px){.c-body{padding:14px 16px 16px}.c-body h3{font-size:15px}}
-  .empty{display:none;text-align:center;color:var(--muted);padding:40px 16px;background:var(--card);border:1px dashed var(--line);border-radius:var(--r-md);margin-top:16px}
+
+  /* resultado da busca */
+  #resultado{display:none}
+  body.buscando #resultado{display:block}
+  body.buscando .some-na-busca{display:none}
+  .empty{display:none;text-align:center;color:var(--muted);padding:40px 16px;background:var(--card);border:1px dashed var(--line);border-radius:var(--r-md)}
   .empty b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
   .empty button{margin-top:12px;border:0;background:var(--teal);color:#fff;font-weight:700;padding:10px 16px;border-radius:10px;cursor:pointer}
 
   /* ---------- como funciona / faq ---------- */
-  .how{margin-top:56px;display:grid;gap:12px;grid-template-columns:1fr}
+  .how{display:grid;gap:12px;grid-template-columns:1fr}
   @media (min-width:780px){.how{grid-template-columns:repeat(3,1fr);gap:16px}}
   .how-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:18px}
   .how-item i{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--teal-50);color:var(--teal);font-style:normal;font-weight:800;margin-bottom:10px}
   .how-item h3{margin:0 0 4px;font-size:15.5px}
   .how-item p{margin:0;color:var(--muted);font-size:14px}
-  .section-title{font-size:22px;letter-spacing:-.4px;font-weight:800;margin:56px 0 14px}
   .faq{display:grid;gap:10px}
   .faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:0 16px}
   .faq summary{cursor:pointer;list-style:none;font-weight:700;padding:15px 24px 15px 0;position:relative}
@@ -164,38 +223,90 @@
   .faq details[open] summary::after{content:"–"}
   .faq details p{margin:0 0 15px;color:var(--muted);font-size:14.5px}
 
-  .cta-ig{margin-top:56px;display:flex;flex-direction:column;align-items:flex-start;gap:14px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#F4F7F6;border-radius:var(--r-lg);padding:26px 22px}
+  .cta-ig{margin-top:48px;display:flex;flex-direction:column;align-items:flex-start;gap:14px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#F4F7F6;border-radius:var(--r-lg);padding:26px 22px}
   .cta-ig h2{margin:0;font-size:22px;letter-spacing:-.3px}
   .cta-ig p{margin:0;opacity:.85;max-width:560px}
+  .cta-btns{display:flex;flex-wrap:wrap;gap:10px}
   @media (min-width:780px){.cta-ig{flex-direction:row;align-items:center;justify-content:space-between;padding:30px 34px}}
 
-  footer{margin-top:40px;border-top:1px solid var(--line);background:var(--card)}
-  .foot{display:grid;gap:14px;padding:26px 16px 34px;color:var(--muted);font-size:12.5px;line-height:1.6}
-  .foot .brand b{color:var(--ink);font-size:15px}
-  .foot .brand small{color:var(--muted);opacity:1}
-  .foot a{color:var(--teal);font-weight:700;text-decoration:none}
-  @media (min-width:780px){.foot{grid-template-columns:1fr 2fr;align-items:start}}
+  /* ---------- rodapé ---------- */
+  footer{margin-top:48px;background:var(--teal-deep);color:rgba(244,247,246,.75)}
+  .foot{display:grid;gap:26px;padding:34px 16px 22px;font-size:13.5px}
+  @media (min-width:780px){.foot{grid-template-columns:1.4fr 1fr 1fr}}
+  .foot .brand{color:#fff;margin:0 0 10px}
+  .foot p{margin:0;line-height:1.6;font-size:13px}
+  .foot h4{margin:0 0 10px;color:#fff;font-size:13px;letter-spacing:.5px;text-transform:uppercase}
+  .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+  .foot ul a{text-decoration:none}
+  .foot ul a:hover{color:#fff;text-decoration:underline}
+  .legal{border-top:1px solid rgba(255,255,255,.1);padding:16px 16px 30px;font-size:12px;line-height:1.6;color:rgba(244,247,246,.6)}
+
+  .totop{position:fixed;right:16px;bottom:18px;z-index:20;width:44px;height:44px;border-radius:50%;border:0;background:var(--teal-dark);color:#fff;box-shadow:var(--shadow-md);cursor:pointer;display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .2s}
+  .totop.show{opacity:1;pointer-events:auto}
+  .totop svg{width:20px;height:20px}
 
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
-<header class="top">
+<header class="head" id="topo">
   <div class="wrap">
-    <nav class="nav">
+    <div class="bar">
       <a class="brand" href="./">
         <img src="img/logo.png" alt="">
         <span><b>Achados Úteis Por Aí</b><small>Garimpados a dedo, bem avaliados e baratos</small></span>
       </a>
+      <nav class="links" aria-label="Menu principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+      <button class="ico" id="abrir-busca" type="button" aria-label="Buscar produto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
       <a class="btn-ig" href="https://instagram.com/achadosuteisporai" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
         Seguir
       </a>
+      <button class="ico menu" id="abrir-menu" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <nav class="secs" id="secs" aria-label="Seções"></nav>
+  </div>
+</header>
+
+<div class="drawer" id="menu" aria-hidden="true">
+  <div class="shade" data-fechar></div>
+  <aside class="panel" role="dialog" aria-label="Menu">
+    <div class="panel-top"><b>Menu</b><button class="ico" type="button" data-fechar aria-label="Fechar menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <h4>Achados</h4>
+    <nav id="menu-achados"></nav>
+    <h4>Categorias</h4>
+    <nav id="menu-cats"></nav>
+    <h4>Ajuda</h4>
+    <nav>
+      <a href="#como-funciona"><span class="e">💡</span>Como funciona</a>
+      <a href="#duvidas"><span class="e">❓</span>Dúvidas frequentes</a>
     </nav>
+    <div class="soc cta-btns">
+      <a class="btn-ig" href="https://www.tiktok.com/@romulo.mencalha" target="_blank" rel="noopener">TikTok</a>
+      <a class="btn-ig" href="https://instagram.com/achadosuteisporai" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </aside>
+</div>
+
+<section class="top">
+  <div class="wrap">
     <div class="hero">
       <h1>Coisas <em>úteis</em> que cabem no bolso</h1>
       <p>Produtos baratos, bem avaliados e com milhares de vendas, escolhidos a dedo pra facilitar o seu dia a dia.</p>
+      <label class="big-search" id="caixa-busca">
+        <span class="sr-only">Buscar produto</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="busca" type="search" placeholder="Viu no vídeo? Busque: copo, balança, pet..." autocomplete="off" enterkeyhint="search">
+        <button type="button" id="limpar-busca" aria-label="Limpar busca"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </label>
       <ul class="pills">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Compra direto na Shopee e no Mercado Livre</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Só produtos bem avaliados</li>
@@ -203,55 +314,40 @@
       </ul>
     </div>
   </div>
-</header>
+</section>
 
 <main class="wrap">
-  <div id="destaque"></div>
+  <nav class="cats some-na-busca" id="atalhos" aria-label="Categorias"></nav>
 
-  <section class="catalog" id="achados" aria-labelledby="t-achados">
-    <div class="cat-head">
-      <div>
-        <h2 id="t-achados">🏆 Os mais vendidos e bem avaliados</h2>
-        <p id="contagem"></p>
-      </div>
-    </div>
-
-    <div class="toolbar" id="toolbar">
-      <div class="tb-row">
-        <label class="search">
-          <span class="sr-only">Buscar produto</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-          <input id="busca" type="search" placeholder="Buscar: air fryer, gaveta, pet..." autocomplete="off">
-        </label>
-        <label class="sr-only" for="ordem">Ordenar</label>
-        <select class="sort" id="ordem">
-          <option value="top">Mais vendidos</option>
-          <option value="nota">Melhor nota</option>
-          <option value="preco">Menor preço</option>
-          <option value="novos">Novidades</option>
-        </select>
-      </div>
-      <div class="chips" id="filtros" role="toolbar" aria-label="Filtrar por categoria"></div>
-    </div>
-
-    <div class="grid" id="grade"></div>
-    <div class="empty" id="vazio"><b>Nenhum achado encontrado</b>Tente outra palavra ou veja todas as categorias.<br><button type="button" id="limpar">Ver todos</button></div>
+  <section class="sec" id="resultado" aria-live="polite">
+    <div class="sec-head"><div><h2 id="t-resultado">Resultado da busca</h2><p id="contagem"></p></div><button class="more" type="button" id="limpar">✕ Limpar busca</button></div>
+    <div class="grid" id="grade-busca"></div>
+    <div class="empty" id="vazio"><b>Nenhum achado encontrado</b>Tente outra palavra ou veja as categorias.<br><button type="button" id="ver-todos">Ver todos os achados</button></div>
   </section>
 
-  <h2 class="section-title">Como funciona</h2>
-  <div class="how">
-    <div class="how-item"><i>1</i><h3>A gente garimpa</h3><p>Checamos a fama do produto: nota alta, muitas vendas e preço que vale a pena.</p></div>
-    <div class="how-item"><i>2</i><h3>Você escolhe</h3><p>Toque em "Ver na Shopee" ou "Ver no Mercado Livre" e confira fotos, avaliações e o preço do dia.</p></div>
-    <div class="how-item"><i>3</i><h3>Compra com segurança</h3><p>O pagamento e a entrega são feitos pela própria loja (Shopee ou Mercado Livre), com a garantia dela.</p></div>
-  </div>
+  <div class="some-na-busca">
+    <div id="destaque"></div>
+    <div id="secoes"></div>
 
-  <h2 class="section-title">Dúvidas frequentes</h2>
-  <div class="faq">
-    <details><summary>Eu pago mais caro comprando por aqui?</summary><p>Não. O preço é exatamente o mesmo da loja. Alguns links são de afiliado: a Shopee ou o Mercado Livre paga uma pequena comissão pra gente, sem custo nenhum pra você.</p></details>
-    <details><summary>Quem vende e entrega o produto?</summary><p>As lojas da Shopee ou do Mercado Livre. Você finaliza a compra no site ou app deles, com pagamento protegido e a garantia de reembolso de cada um.</p></details>
-    <details><summary>O preço do site está desatualizado, e agora?</summary><p>Os preços mudam toda hora nas lojas (promoções, variações de modelo). O valor que vale é sempre o que aparece na Shopee ou no Mercado Livre na hora da compra.</p></details>
-    <details><summary>Vi o produto num vídeo do TikTok. Onde ele está?</summary><p>Digite na busca a palavra que aparece no final do vídeo (por exemplo "copo" ou "balança") e o produto aparece na hora.</p></details>
-    <details><summary>Como recebo os links pelo Instagram?</summary><p>Comente "QUERO" no post do produto que te mandamos o link na hora, direto no seu direct.</p></details>
+    <section class="sec sec-cat" id="como-funciona">
+      <div class="sec-head"><div><h2>💡 Como funciona</h2></div></div>
+      <div class="how">
+        <div class="how-item"><i>1</i><h3>A gente garimpa</h3><p>Checamos a fama do produto: nota alta, muitas vendas e preço que vale a pena.</p></div>
+        <div class="how-item"><i>2</i><h3>Você escolhe</h3><p>Toque em "Ver na Shopee" ou "Ver no Mercado Livre" e confira fotos, avaliações e o preço do dia.</p></div>
+        <div class="how-item"><i>3</i><h3>Compra com segurança</h3><p>O pagamento e a entrega são feitos pela própria loja (Shopee ou Mercado Livre), com a garantia dela.</p></div>
+      </div>
+    </section>
+
+    <section class="sec" id="duvidas">
+      <div class="sec-head"><div><h2>❓ Dúvidas frequentes</h2></div></div>
+      <div class="faq">
+        <details><summary>Eu pago mais caro comprando por aqui?</summary><p>Não. O preço é exatamente o mesmo da loja. Alguns links são de afiliado: a Shopee ou o Mercado Livre paga uma pequena comissão pra gente, sem custo nenhum pra você.</p></details>
+        <details><summary>Quem vende e entrega o produto?</summary><p>As lojas da Shopee ou do Mercado Livre. Você finaliza a compra no site ou app deles, com pagamento protegido e a garantia de reembolso de cada um.</p></details>
+        <details><summary>O preço do site está desatualizado, e agora?</summary><p>Os preços mudam toda hora nas lojas (promoções, variações de modelo). O valor que vale é sempre o que aparece na Shopee ou no Mercado Livre na hora da compra.</p></details>
+        <details><summary>Vi o produto num vídeo do TikTok. Onde ele está?</summary><p>Digite na busca do topo a palavra que aparece no final do vídeo (por exemplo "copo" ou "balança") e o produto aparece na hora.</p></details>
+        <details><summary>Como recebo os links pelo Instagram?</summary><p>Comente "QUERO" no post do produto que te mandamos o link na hora, direto no seu direct.</p></details>
+      </div>
+    </section>
   </div>
 
   <div class="cta-ig">
@@ -274,19 +370,31 @@
 
 <footer>
   <div class="wrap foot">
-    <a class="brand" href="./"><img src="img/logo.png" alt=""><span><b>Achados Úteis Por Aí</b><small>achadosuteisporai.com.br</small></span></a>
     <div>
-      Preços conferidos em <span id="conferido"></span> e podem mudar a qualquer momento: o valor que vale é o da loja na hora da compra.<br>
-      Este site não é a Shopee nem o Mercado Livre. Alguns links são de afiliado: você paga o mesmo preço e a gente recebe uma pequena comissão, que ajuda a manter o garimpo 💚<br>
-      <a href="https://instagram.com/achadosuteisporai" target="_blank" rel="noopener">@achadosuteisporai</a>
+      <a class="brand" href="./"><img src="img/logo.png" alt=""><span><b>Achados Úteis Por Aí</b></span></a>
+      <p>Produtos baratos e úteis, garimpados a dedo, com compra segura direto na Shopee e no Mercado Livre.</p>
     </div>
+    <div><h4>Categorias</h4><ul id="rodape-cats"></ul></div>
+    <div><h4>Ajuda</h4><ul>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#duvidas">Dúvidas frequentes</a></li>
+      <li><a href="https://instagram.com/achadosuteisporai" target="_blank" rel="noopener">Instagram @achadosuteisporai</a></li>
+      <li><a href="https://www.tiktok.com/@romulo.mencalha" target="_blank" rel="noopener">TikTok</a></li>
+    </ul></div>
+  </div>
+  <div class="wrap legal">
+    Preços conferidos em <span id="conferido"></span> e podem mudar a qualquer momento: o valor que vale é o da loja na hora da compra.
+    Este site não é a Shopee nem o Mercado Livre. Alguns links são de afiliado: você paga o mesmo preço e a gente recebe uma pequena comissão, que ajuda a manter o garimpo 💚
   </div>
 </footer>
+
+<button class="totop" id="totop" type="button" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
 
 <script src="produtos.js"></script>
 <script>
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const norm = s => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const $ = id => document.getElementById(id);
   const P = window.PRODUTOS.map((p, i) => ({ ...p, _i: i }));
   const C = window.CATEGORIAS;
   const catNome = id => (C.find(c => c.id === id) || {}).nome || '';
@@ -297,19 +405,22 @@
   // placar "mais vendidos e bem avaliados": vendas em escala log (10x mais vendas = +1)
   // e cada 0,1 de nota vale +0,2 (ex.: nota 4,9 com 25 mil vendas empata com 4,8 com 40 mil)
   const placar = p => Math.log10(vendas(p) + 10) + (notaDe(p) - 4.7) * 2;
+  const porPlacar = (a, b) => placar(b) - placar(a) || a._i - b._i;
   const fmtNota = n => String(n).replace('.', ',');
   // loja do produto: "ml" = Mercado Livre; sem "loja" = Shopee
   const LOJAS = { shopee: 'Shopee', ml: 'Mercado Livre' };
   const loja = p => LOJAS[p.loja] ? p.loja : 'shopee';
   const naLoja = p => (loja(p) === 'ml' ? 'no ' : 'na ') + LOJAS[loja(p)];
   const seta = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-  document.getElementById('conferido').textContent = window.PRECOS_CONFERIDOS_EM || '';
+  const setaEsq = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>';
+  $('conferido').textContent = window.PRECOS_CONFERIDOS_EM || '';
 
   // ?produto=<slug> leva pra página própria do produto (achadosuteisporai.com.br/<slug>/)
   const qs = new URLSearchParams(location.search);
   const slugPedido = qs.get('produto');
   if (slugPedido && P.some(p => p.slug === slugPedido)) location.replace('/' + slugPedido + '/' + location.search.replace(/([?&])produto=[^&]*&?/, '$1').replace(/[?&]$/, ''));
-  // destaque (ou o produto que a pessoa veio ver: ?p=itemId)
+
+  // ---------- destaque (ou o produto que a pessoa veio ver: ?p=itemId) ----------
   const pid = qs.get('p');
   // rodízio semanal: semana 0 começa na segunda 19/10/2026, 00h de Brasília (03h UTC)
   const R = (window.DESTAQUES || []).filter(id => P.some(p => p.itemId === id));
@@ -317,8 +428,8 @@
   const daSemana = R.length ? P.find(p => p.itemId === R[((semana % R.length) + R.length) % R.length]) : null;
   const d = (pid && P.find(p => p.itemId === pid)) || daSemana || P.find(p => p.destaque);
   const veio = !!(pid && d && d.itemId === pid);
-  if (d) document.getElementById('destaque').innerHTML = `
-    <a class="feat${veio ? '' : ' is-top'}" href="${esc(d.link)}" target="_blank" rel="noopener sponsored">
+  if (d) $('destaque').innerHTML = `
+    <a class="feat" href="${esc(d.link)}" target="_blank" rel="noopener sponsored">
       <div class="feat-media"><img src="${esc(d.img)}" alt="${esc(d.nome)}"></div>
       <div class="feat-body">${veio ? '' : '<div class="seal" aria-hidden="true"><span>⭐<b>Top 1</b>da semana</span></div>'}
         <span class="kicker">${veio ? '🔎 Você veio ver este achado' : '🏆 Destaque da semana'}</span>
@@ -329,10 +440,10 @@
       </div>
     </a>`;
 
-  // catálogo
-  const lista = P.filter(p => p !== d);
+  // ---------- card enxuto ----------
   const chave = u => String(u).split('/').pop().replace(/_tn$/, '');
-  const card = (p, i) => {
+  let nCard = 0;
+  const card = (p, rank) => {
     // linha discreta de prova: ★ nota · vendas
     const vSelo = p.selo && !/nota/i.test(p.selo);
     const meta = [p.nota ? `<span class="star">★</span> ${fmtNota(p.nota)}` : '', vSelo ? esc(p.selo) : ''].filter(Boolean).join(' · ');
@@ -341,58 +452,119 @@
     const lk = `href="${esc(p.link)}" target="_blank" rel="noopener sponsored"`;
     // foto e nome levam pra página do produto; o botão vai direto pra loja
     const pg = p.slug ? `href="/${esc(p.slug)}/"` : lk;
+    const marca = rank ? `<span class="c-rank">${rank}º</span>` : (p.novo ? '<span class="c-new">Novo</span>' : '');
+    const lazy = nCard++ < 6 ? 'eager' : 'lazy';
     return `
     <article class="card">
-      <a class="c-media" ${pg}><img src="${esc(p.img)}" alt="${esc(p.nome)}" loading="${i < 8 ? 'eager' : 'lazy'}" decoding="async">${fotos[1] ? `<img class="alt" src="${esc(fotos[1])}" alt="" loading="lazy" decoding="async">` : ''}${p.novo ? '<span class="c-new">Novo</span>' : ''}</a>
+      <a class="c-media" ${pg}><img src="${esc(p.img)}" alt="${esc(p.nome)}" loading="${lazy}" decoding="async">${fotos[1] ? `<img class="alt" src="${esc(fotos[1])}" alt="" loading="lazy" decoding="async">` : ''}${marca}</a>
       <div class="c-body">
         ${meta ? `<div class="c-meta">${meta}</div>` : ''}
         <h3><a ${pg}>${esc(p.chamada)}</a></h3>
         <div class="c-foot">
           <span class="price"><small>${p.aPartir ? 'a partir de' : ''}</small>R$ ${esc(p.preco)}</span>
-          <a class="c-btn" ${lk}>Ver ${naLoja(p)} ${seta}</a>
+          <a class="c-btn ${loja(p)}" ${lk}>Ver ${naLoja(p)} ${seta}</a>
         </div>
       </div>
     </article>`;
   };
-  const estado = { cat: 'todos', q: '', ordem: 'top' };
-  const grade = document.getElementById('grade'), vazio = document.getElementById('vazio');
-  const filtros = document.getElementById('filtros');
 
-  const usadas = C.filter(c => lista.some(p => p.categoria === c.id));
-  filtros.innerHTML = [`<button class="chip" data-f="todos" aria-pressed="true">Todos</button>`]
-    .concat(usadas.map(c => `<button class="chip" data-f="${c.id}" aria-pressed="false">${esc(c.nome)}</button>`)).join('');
+  // ---------- seções ----------
+  const usadas = C.filter(c => P.some(p => p.categoria === c.id));
+  const ranking = P.filter(p => p !== d).sort(porPlacar);
+  const baratos = P.filter(p => num(p.preco) <= 30).sort(porPlacar);
+  const SECOES = [
+    { id: 'mais-vendidos', menu: '🏆 Mais vendidos', titulo: '🏆 Os mais vendidos e bem avaliados', sub: 'Os campeões de vendas com as melhores notas', itens: ranking.slice(0, 8), tipo: 'grade', rank: true },
+    { id: 'ate-30', menu: '💸 Até R$ 30', titulo: '💸 Achados até R$ 30', sub: `${baratos.length} achados baratinhos`, itens: baratos, tipo: 'trilho' },
+    ...usadas.map(c => {
+      const itens = P.filter(p => p.categoria === c.id).sort(porPlacar);
+      return { id: 'cat-' + c.id, menu: `${c.icone} ${c.nome}`, titulo: `<span class="e">${c.icone}</span>${esc(c.nome)}`, sub: `${itens.length} ${itens.length === 1 ? 'achado' : 'achados'}`, itens, tipo: 'grade', cat: c };
+    })
+  ];
 
-  function render() {
-    const q = norm(estado.q.trim());
-    // com busca, inclui também o destaque (quem vem do TikTok busca pelo nome)
-    let itens = (q ? P : lista).filter(p => (estado.cat === 'todos' || p.categoria === estado.cat) &&
-      (!q || norm([p.nome, p.chamada, p.descricao, catNome(p.categoria)].join(' ')).includes(q)));
-    if (estado.ordem === 'top') itens.sort((a, b) => placar(b) - placar(a) || a._i - b._i);
-    if (estado.ordem === 'nota') itens.sort((a, b) => (+b.nota || 0) - (+a.nota || 0) || vendas(b) - vendas(a) || a._i - b._i);
-    if (estado.ordem === 'preco') itens.sort((a, b) => num(a.preco) - num(b.preco));
-    if (estado.ordem === 'novos') itens.sort((a, b) => (b.novo ? 1 : 0) - (a.novo ? 1 : 0) || a._i - b._i);
-    grade.innerHTML = itens.map(card).join('');
-    vazio.style.display = itens.length ? 'none' : 'block';
-    document.getElementById('contagem').textContent = `${itens.length} ${itens.length === 1 ? 'produto' : 'produtos'}${estado.cat !== 'todos' ? ' em ' + catNome(estado.cat) : ''}`;
+  $('secoes').innerHTML = SECOES.map((s, k) => {
+    const corpo = s.tipo === 'trilho'
+      ? `<div class="rail" id="r-${s.id}">${s.itens.map(p => card(p)).join('')}</div>`
+      : `<div class="grid">${s.itens.map((p, i) => card(p, s.rank ? i + 1 : 0)).join('')}</div>`;
+    const extra = s.tipo === 'trilho'
+      ? `<div class="rail-nav"><button type="button" data-rail="r-${s.id}" data-dir="-1" aria-label="Anterior">${setaEsq}</button><button type="button" data-rail="r-${s.id}" data-dir="1" aria-label="Próximo">${seta}</button></div>`
+      : '';
+    return `
+    <section class="sec${s.cat ? ' sec-cat' : ''}" id="${s.id}">
+      <div class="sec-head"><div><h2>${s.titulo}</h2><p>${esc(s.sub)}</p></div>${extra}</div>
+      ${corpo}
+    </section>`;
+  }).join('');
+
+  // atalhos de categoria, menu rápido, menu lateral e rodapé
+  $('atalhos').innerHTML = usadas.map(c => {
+    const n = P.filter(p => p.categoria === c.id).length;
+    return `<a class="cat-tile" href="#cat-${c.id}"><span class="e">${c.icone}</span><b>${esc(c.nome)}</b><small>${n} ${n === 1 ? 'achado' : 'achados'}</small></a>`;
+  }).join('');
+  $('secs').innerHTML = SECOES.map(s => `<a href="#${s.id}" data-s="${s.id}">${esc(s.menu)}</a>`).join('');
+  $('menu-achados').innerHTML = SECOES.filter(s => !s.cat).map(s => `<a href="#${s.id}"><span class="e">${s.menu.split(' ')[0]}</span>${esc(s.menu.split(' ').slice(1).join(' '))}<em>${s.itens.length}</em></a>`).join('');
+  $('menu-cats').innerHTML = SECOES.filter(s => s.cat).map(s => `<a href="#${s.id}"><span class="e">${s.cat.icone}</span>${esc(s.cat.nome)}<em>${s.itens.length}</em></a>`).join('');
+  $('rodape-cats').innerHTML = usadas.map(c => `<li><a href="#cat-${c.id}">${c.icone} ${esc(c.nome)}</a></li>`).join('');
+
+  // setas dos trilhos (computador)
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-rail]'); if (!b) return;
+    const r = $(b.dataset.rail); r.scrollBy({ left: +b.dataset.dir * r.clientWidth * 0.8, behavior: 'smooth' });
+  });
+
+  // ---------- busca ----------
+  const busca = $('busca'), caixa = $('caixa-busca');
+  function buscar() {
+    const q = norm(busca.value.trim());
+    caixa.classList.toggle('has', !!busca.value);
+    document.body.classList.toggle('buscando', !!q);
+    if (!q) return;
+    // busca por todas as palavras (nome, chamada, descrição e categoria)
+    const palavras = q.split(/\s+/);
+    const itens = P.filter(p => { const t = norm([p.nome, p.chamada, p.descricao, catNome(p.categoria)].join(' ')); return palavras.every(w => t.includes(w)); }).sort(porPlacar);
+    $('grade-busca').innerHTML = itens.map(p => card(p)).join('');
+    $('vazio').style.display = itens.length ? 'none' : 'block';
+    $('t-resultado').textContent = `Resultado para "${busca.value.trim()}"`;
+    $('contagem').textContent = `${itens.length} ${itens.length === 1 ? 'produto encontrado' : 'produtos encontrados'}`;
   }
+  const limpar = () => { busca.value = ''; buscar(); };
+  busca.addEventListener('input', buscar);
+  busca.addEventListener('keydown', e => { if (e.key === 'Enter') { busca.blur(); $('resultado').scrollIntoView({ behavior: 'smooth' }); } });
+  $('limpar-busca').addEventListener('click', e => { e.preventDefault(); limpar(); busca.focus(); });
+  $('limpar').addEventListener('click', limpar);
+  $('ver-todos').addEventListener('click', () => { limpar(); $('mais-vendidos').scrollIntoView({ behavior: 'smooth' }); });
+  $('abrir-busca').addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); busca.focus({ preventScroll: true }); });
+  // clicar num link de seção durante a busca limpa a busca antes de rolar
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (a && document.body.classList.contains('buscando')) limpar();
+  }, true);
 
-  filtros.addEventListener('click', e => {
-    const b = e.target.closest('.chip'); if (!b) return;
-    filtros.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x === b));
-    estado.cat = b.dataset.f; render();
-  });
-  document.getElementById('busca').addEventListener('input', e => { estado.q = e.target.value; render(); });
-  document.getElementById('ordem').addEventListener('change', e => { estado.ordem = e.target.value; render(); });
-  document.getElementById('limpar').addEventListener('click', () => {
-    estado.q = ''; estado.cat = 'todos'; document.getElementById('busca').value = '';
-    filtros.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x.dataset.f === 'todos')); render();
-  });
+  // ---------- menu lateral ----------
+  const menu = $('menu'), abrir = $('abrir-menu');
+  const setMenu = on => { menu.classList.toggle('open', on); menu.setAttribute('aria-hidden', !on); abrir.setAttribute('aria-expanded', on); document.body.style.overflow = on ? 'hidden' : ''; };
+  abrir.addEventListener('click', () => setMenu(true));
+  menu.addEventListener('click', e => { if (e.target.closest('[data-fechar], a')) setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
-  // borda na barra de filtros quando ela gruda no topo
-  const tb = document.getElementById('toolbar');
-  new IntersectionObserver(([e]) => tb.classList.toggle('stuck', e.intersectionRatio < 1), { threshold: [1], rootMargin: '-1px 0px 0px 0px' }).observe(tb);
+  // ---------- menu rápido acompanha a seção visível ----------
+  const secs = $('secs');
+  const marcar = id => {
+    secs.querySelectorAll('a').forEach(a => {
+      const on = a.dataset.s === id; a.classList.toggle('on', on);
+      if (on) secs.scrollTo({ left: a.offsetLeft - 16, behavior: 'smooth' });
+    });
+  };
+  const vis = new Map();
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => vis.set(e.target.id, e.isIntersecting));
+    const atual = SECOES.find(s => vis.get(s.id));
+    marcar(atual ? atual.id : null);
+  }, { rootMargin: '-130px 0px -55% 0px' });
+  SECOES.forEach(s => io.observe($(s.id)));
 
-  render();
+  const totop = $('totop');
+  totop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  addEventListener('scroll', () => totop.classList.toggle('show', scrollY > 900), { passive: true });
 </script>
 </body>
 </html>

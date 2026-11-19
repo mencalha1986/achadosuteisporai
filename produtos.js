@@ -1,6 +1,6 @@
 window.PRECOS_CONFERIDOS_EM = "29/10/2026";
 // Produtos do site achadosuteisporai.com.br
-// - categoria: "tecnologia" | "cozinha" | "organizacao" | "limpeza"
+// - categoria: "verao" | "cozinha" | "organizacao" | "tecnologia" | "casa" | "pet" (a ordem de CATEGORIAS é a ordem das seções do site)
 // - destaque: true no produto que aparece grande no topo quando o rodízio (DESTAQUES) estiver vazio
 // - aPartir: true quando o produto tem variações com preços diferentes (mostra "a partir de")
 // - fotos: fotos do anúncio (a 1ª grande no card, as outras em miniatura; troca ao passar o mouse/tocar)
@@ -26,12 +26,13 @@ window.DESTAQUES = [
 ];
 
 window.CATEGORIAS = [
-  { id: "tecnologia",  nome: "Tecnologia",  icone: "📱" },
-  { id: "cozinha",     nome: "Cozinha",     icone: "🍳" },
-  { id: "organizacao", nome: "Organização", icone: "🗂️" },
-  { id: "limpeza",     nome: "Limpeza",     icone: "🧽" },
-  { id: "casa",        nome: "Casa e decoração", icone: "🏠" },
-  { id: "moda",        nome: "Moda praia", icone: "👙" }
+  { id: "verao",       nome: "Verão e praia",  icone: "☀️" },
+  { id: "cozinha",     nome: "Cozinha",        icone: "🍳" },
+  { id: "organizacao", nome: "Organização",    icone: "🗂️" },
+  { id: "tecnologia",  nome: "Tecnologia",     icone: "📱" },
+  { id: "casa",        nome: "Casa e limpeza", icone: "🏠" },
+  { id: "pet",         nome: "Pet",            icone: "🐾" },
+  { id: "limpeza",     nome: "Limpeza",        icone: "🧽" }
 ];
 
 window.PRODUTOS = [
@@ -48,7 +49,7 @@ window.PRODUTOS = [
     "fotos": ["https://down-br.img.susercontent.com/file/sg-11134201-820nr-mnl7a8il8snc8f","https://down-br.img.susercontent.com/file/sg-11134201-820my-mnl7a67f33lv38","https://down-br.img.susercontent.com/file/sg-11134201-820n2-mnl7aain41l0cd","https://down-br.img.susercontent.com/file/br-11134207-820mh-mo3t8d4lybk032","https://down-br.img.susercontent.com/file/sg-11134201-820om-mnl7a79h3nr491"],
     "link": "https://s.shopee.com.br/70LFyy3xf0",
     "selo": "Nota 4,8",
-    "categoria": "cozinha",
+    "categoria": "verao",
     "shopId": "1561255159",
     "itemId": "58209744532",
     "combina": "MLB5263666062",
@@ -66,7 +67,7 @@ window.PRODUTOS = [
     "fotos": ["https://http2.mlstatic.com/D_NQ_NP_2X_955674-MLB117337708148_102026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp","https://http2.mlstatic.com/D_NQ_NP_2X_660072-MLB117151308901_092026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp","https://http2.mlstatic.com/D_NQ_NP_2X_626727-MLB117152729633_092026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp","https://http2.mlstatic.com/D_NQ_NP_2X_786072-MLB115700354134_092026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp","https://http2.mlstatic.com/D_NQ_NP_2X_720955-MLB115700354414_092026-F-copo-termico-tampa-abridor-cerveja-caixa-som-bluetooth-473ml.webp"],
     "link": "https://meli.la/2Vj526g",
     "selo": "+1000 vendidos",
-    "categoria": "tecnologia",
+    "categoria": "verao",
     "loja": "ml",
     "itemId": "MLB5263666062",
     "combina": "58209744532",
@@ -121,7 +122,7 @@ window.PRODUTOS = [
     "fotos": ["https://down-br.img.susercontent.com/file/sg-11134201-22110-k2p48emqsojv29","https://down-br.img.susercontent.com/file/sg-11134201-22110-ic2eip7qsojv94","https://down-br.img.susercontent.com/file/sg-11134201-22110-rb4yzfxqsojv68","https://down-br.img.susercontent.com/file/sg-11134201-22110-fhmvbjxqsojv81","https://down-br.img.susercontent.com/file/sg-11134201-22110-uxppboxqsojv56"],
     "link": "https://s.shopee.com.br/80DZGOZ6ql",
     "selo": "Nota 4,8",
-    "categoria": "moda",
+    "categoria": "verao",
     "shopId": "601168577",
     "itemId": "18361282272",
     "novo": true,
@@ -139,7 +140,7 @@ window.PRODUTOS = [
     "fotos": ["https://down-br.img.susercontent.com/file/br-11134207-820m4-mqqldyl4klxe3f","https://down-br.img.susercontent.com/file/br-11134207-820md-mskfl2u1ul8m48","https://down-br.img.susercontent.com/file/br-11134207-820lg-mqqldyl4aryaa1","https://down-br.img.susercontent.com/file/br-11134207-820lk-mqqldyl47yte0c","https://down-br.img.susercontent.com/file/br-11134207-820m0-mskfl2u1t6o6e6"],
     "link": "https://s.shopee.com.br/7pu8iyADTm",
     "selo": "Nota 4,9",
-    "categoria": "casa",
+    "categoria": "verao",
     "shopId": "1355121921",
     "itemId": "22995072272",
     "novo": true,
@@ -156,7 +157,7 @@ window.PRODUTOS = [
     "fotos": ["https://down-br.img.susercontent.com/file/br-11134207-7r98o-m7mn1mprd7b642","https://down-br.img.susercontent.com/file/br-11134207-7r98o-m7mmudfpu0xu8c","https://down-br.img.susercontent.com/file/br-11134201-820lx-mr35nhelmhom07","https://down-br.img.susercontent.com/file/br-11134207-7r98o-m7mmudfpwu2qc6","https://down-br.img.susercontent.com/file/br-11134207-7r98o-m7mmudfpy8n66b"],
     "link": "https://s.shopee.com.br/2LZCAsvDTw",
     "selo": "+10 mil vendidos",
-    "categoria": "casa",
+    "categoria": "verao",
     "shopId": "1485007125",
     "itemId": "23498337370",
     "novo": true,
@@ -173,7 +174,7 @@ window.PRODUTOS = [
     "fotos": ["https://down-br.img.susercontent.com/file/sg-11134201-82626-ml3xpobi2osn0f","https://down-br.img.susercontent.com/file/sg-11134201-8261g-ml3xppx7j5zb00","https://down-br.img.susercontent.com/file/sg-11134201-8260o-ml3xpnw3mdc381","https://down-br.img.susercontent.com/file/sg-11134201-8262b-ml3xpo1c035u42","https://down-br.img.susercontent.com/file/sg-11134201-82629-ml3xprfpm51g4b"],
     "link": "https://s.shopee.com.br/5AtNY7sQCM",
     "selo": "Nota 4,9",
-    "categoria": "casa",
+    "categoria": "verao",
     "shopId": "429262942",
     "itemId": "53706391602",
     "novo": true,
@@ -275,7 +276,7 @@ window.PRODUTOS = [
     "fotos": ["https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3dg900h03zsa3","https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3dg900q3emz1d","https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3dg900q7mcbcf","https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3dg900q67rv68","https://down-br.img.susercontent.com/file/br-11134207-820lg-msvvcukrhbly77"],
     "link": "https://s.shopee.com.br/6q1bU3pVf1",
     "selo": "+3 mil/mês",
-    "categoria": "limpeza",
+    "categoria": "pet",
     "shopId": "1258878023",
     "itemId": "19699563205",
     "novo": true,
@@ -489,7 +490,7 @@ window.PRODUTOS = [
     "fotos": ["https://down-br.img.susercontent.com/file/br-11134207-820ma-mnz1tlubehoi54","https://down-br.img.susercontent.com/file/br-11134207-820mc-mnz1tlugbh8h36","https://down-br.img.susercontent.com/file/br-11134207-820lj-mnz1tlueraisa5","https://down-br.img.susercontent.com/file/br-11134207-820l7-mnz1tlubd34241"],
     "link": "https://s.shopee.com.br/1B81zdWys",
     "selo": "+20 mil vendidos",
-    "categoria": "limpeza",
+    "categoria": "casa",
     "shopId": "751932079",
     "itemId": "23594951442",
     "aPartir": true
@@ -533,7 +534,7 @@ window.PRODUTOS = [
     "fotos": ["https://down-br.img.susercontent.com/file/br-11134207-7qukw-lh4pr7ab23nv06","https://down-br.img.susercontent.com/file/972ae87d17dc59e1eafe9ccb620ec286","https://down-br.img.susercontent.com/file/br-11134207-7qukw-lh4pr7aazaizea","https://down-br.img.susercontent.com/file/br-11134207-81z1k-mi9khh73sk5d71","https://down-br.img.susercontent.com/file/br-11134207-81z1k-mi9khh73wrup18"],
     "link": "https://s.shopee.com.br/2BFecQXgfv",
     "selo": "+9 mil vendidos",
-    "categoria": "limpeza",
+    "categoria": "casa",
     "shopId": "569114904",
     "itemId": "19098542872",
     "novo": true
@@ -579,7 +580,7 @@ window.PRODUTOS = [
     "fotos": ["https://down-br.img.susercontent.com/file/br-11134207-820lu-mlc0f12vrabrac","https://down-br.img.susercontent.com/file/sg-11134201-8261z-mkgglfhgp4p1ef","https://down-br.img.susercontent.com/file/sg-11134201-8260z-mkgglge2akg085","https://down-br.img.susercontent.com/file/sg-11134201-8262x-mkgglharbpc3d1","https://down-br.img.susercontent.com/file/sg-11134201-825zv-mkggll0qs9ae5d"],
     "link": "https://s.shopee.com.br/1BA2Rfw4Y",
     "selo": "Nota 4,8",
-    "categoria": "limpeza",
+    "categoria": "pet",
     "shopId": "1323203204",
     "itemId": "58254858171",
     "video": true,
