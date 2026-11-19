@@ -38,6 +38,29 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Kit 4 câmeras lâmpada Wi-Fi 360° com visão noturna Full HD",
+    "slug": "camera-lampada-wifi",
+    "chamada": "Câmera que rosqueia no bocal da lâmpada",
+    "descricao": "Kit com 4 câmeras que instalam no bocal padrão E27, sem obra. Full HD 1080p, visão noturna, gira 360° pelo app, detecção de movimento e áudio bidirecional. Dá pra ver a casa ao vivo pelo celular. De R$560 por R$207,60 (62% OFF).",
+    "preco": "207,60",
+    "vendidos": 100,
+    "nota": 4.8,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_911996-MLA120233783357_102026-F.webp",
+    "fotos": [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_911996-MLA120233783357_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_612413-MLA120234992059_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_821520-MLA118567865218_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_730973-MLA120234196541_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_903527-MLA118568247974_102026-F.webp"
+    ],
+    "link": "https://meli.la/1baL7L8",
+    "selo": "+100 vendidos",
+    "categoria": "tecnologia",
+    "loja": "ml",
+    "itemId": "MLB81042467",
+    "novo": true
+  },
+  {
     "nome": "Copo térmico Stanley Pint Adventure 354ml (original)",
     "slug": "copo-stanley-pint-354ml",
     "chamada": "O copo Stanley pela metade do preço",
