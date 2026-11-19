@@ -35,11 +35,11 @@
   .crumbs a{color:var(--teal);font-weight:700;text-decoration:none}
   .prod{display:grid;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:12px;box-shadow:0 8px 24px rgba(16,40,46,.08)}
   .main{display:block;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:#fff}
-  .main img{width:100%;height:100%;object-fit:cover}
+  .main img{width:100%;height:100%;object-fit:contain;background:#fff}
   .thumbs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:8px}
   .thumbs button{padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;aspect-ratio:1/1;background:#f2f4f4;cursor:pointer;opacity:.75}
   .thumbs button.on,.thumbs button:hover{border-color:var(--teal);opacity:1}
-  .thumbs img{width:100%;height:100%;object-fit:cover}
+  .thumbs img{width:100%;height:100%;object-fit:contain;background:#fff}
   .info{display:flex;flex-direction:column;gap:12px;padding:4px 6px 8px}
   .cat{font-size:12px;font-weight:800;letter-spacing:.3px;color:var(--teal);text-transform:uppercase}
   h1{margin:0;font-size:clamp(23px,4.2vw,32px);line-height:1.12;letter-spacing:-.5px}
@@ -62,7 +62,7 @@
   .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   @media (min-width:820px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
   .card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none}
-  .card img{aspect-ratio:1/1;object-fit:cover;width:100%}
+  .card img{aspect-ratio:1/1;object-fit:contain;background:#fff;width:100%}
   .card div{padding:10px 12px 12px}
   .card b{display:block;font-size:14px;line-height:1.25}
   .card span{display:block;margin-top:6px;font-weight:800;color:var(--teal-dark)}
