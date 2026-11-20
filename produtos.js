@@ -38,6 +38,29 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Varal de chão grande 3 andares dobrável com rodinhas, 1,70 m",
+    "slug": "varal-de-chao-3-andares",
+    "chamada": "Roupa secando em pé, sem ocupar a casa",
+    "descricao": "Varal de chão vertical com 3 prateleiras de altura regulável, 4 rodinhas pra levar pra qualquer canto, 2 abas laterais pra cabides e barra pra sapatos. Aço e plástico, aguenta até 10 kg e tem 1,70 m de altura. Dobrável, vem com manual de montagem.",
+    "preco": "78,80",
+    "vendidos": 250000,
+    "nota": 4.6,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_854633-MLA119226640033_102026-F.webp",
+    "fotos": [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_854633-MLA119226640033_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_856661-MLA117612556418_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_798782-MLA110350712233_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_922077-MLA110350798597_042026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_856865-MLA110350404179_042026-F.webp"
+    ],
+    "link": "https://meli.la/1nQyMeV",
+    "selo": "+250 mil vendidos",
+    "categoria": "casa",
+    "loja": "ml",
+    "itemId": "MLB26417959",
+    "novo": true
+  },
+  {
     "nome": "Papel de parede adesivo tijolinho 3D, rolo 45 cm x 5 m",
     "slug": "papel-de-parede-tijolinho",
     "chamada": "Parede de tijolinho sem obra",
