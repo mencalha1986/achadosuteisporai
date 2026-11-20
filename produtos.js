@@ -38,6 +38,29 @@ window.CATEGORIAS = [
 
 window.PRODUTOS = [
   {
+    "nome": "Jogo de panelas Brinox Ceramic Life Smart Plus Vanilla 8 peças",
+    "slug": "jogo-de-panelas-brinox-8-pecas",
+    "chamada": "Black Friday: 56% OFF no jogo de panelas que nada gruda",
+    "descricao": "Promoção de Black Friday: de R$1.099,99 por R$479,90 (9x R$53,32 sem juros). Revestimento cerâmico antiaderente Pro Ceramic Premium com tecnologia Mineral Resist, livre de metais pesados. Alumínio de 2,5 mm, cabos soft-touch que não esquentam e tampas de vidro temperado com saída de vapor. Vem com 2 caçarolas (24 cm 4,55 L e 20 cm 2,55 L), 2 panelas (18 cm 1,55 L e 16 cm 1,25 L), 2 frigideiras (20 cm e 14 cm), 1 grill 24 cm e 1 fervedor de 1 L. Para fogão a gás, elétrico ou vitrocerâmico (não serve em indução). Não vai à lava-louças nem ao forno.",
+    "preco": "479,90",
+    "vendidos": 100000,
+    "nota": 4.8,
+    "img": "https://http2.mlstatic.com/D_NQ_NP_2X_911575-MLA115299730288_082026-F.webp",
+    "fotos": [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_911575-MLA115299730288_082026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_763755-MLA107649296221_022026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_919304-MLA119456052269_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_779864-MLA119455282751_102026-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_717276-MLA119455401459_102026-F.webp"
+    ],
+    "link": "https://meli.la/1JY1T7B",
+    "selo": "Black Friday 56% OFF",
+    "categoria": "cozinha",
+    "loja": "ml",
+    "itemId": "MLB32717965",
+    "novo": true
+  },
+  {
     "nome": "Varal de chão grande 3 andares dobrável com rodinhas, 1,70 m",
     "slug": "varal-de-chao-3-andares",
     "chamada": "Roupa secando em pé, sem ocupar a casa",
